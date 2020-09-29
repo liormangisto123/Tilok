@@ -1,0 +1,118 @@
+.SignUp{
+    direction: ltr;
+    text-align: left;
+    width: 700px; 
+    padding: 1%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;  
+    width: 800px;
+    padding: 10px 60px;
+  }
+
+  select[name=language]{
+    width: 80%;
+    margin: 8px;
+    border-radius: 15px;
+    font-family: 'Fira Sans', sans-serif;
+    /* box-shadow: 0 8px 6px -6px black; */
+  }
+  /* h1{
+    font-size: 38px;
+  } */
+  
+  input[type=text],[type=date] {
+    width: 80%;
+    margin: 8px 0;
+    border-radius: 15px;
+    font-family: 'Fira Sans', sans-serif;
+    /* box-shadow: 0 8px 6px -6px black; */
+    background-color:white;
+
+    /* padding: 12px 20px; */
+    /* box-sizing: border-box; */
+    /* color: rgb(10, 10, 10); */
+  }
+  /* input[type=date] {
+    width: 40%;
+    margin: 8px 0;
+    border-radius: 15px;
+    background-color: rgba(230, 8, 8, 0);
+    font-family: 'Fira Sans', sans-serif; */
+    /* padding: 12px 20px; */
+    /* box-sizing: border-box; */
+    /* color: rgb(10, 10, 10); */
+  /* } */
+  /* .container{
+    background-color: white;
+    border-style:hidden;
+    border-radius: 15px;
+    padding:18px;
+    text-align: center;
+    box-shadow: 0 8px 6px -6px black;
+    opacity: 0.8; 
+  } */
+
+.forgot-password,
+.forgot-password a {
+  text-align: left;
+  font-size: 13px;
+  padding-top: 10px;
+  color: blue;
+  margin:auto;
+  font-family: 'Fira Sans', sans-serif;
+  text-align: center;
+
+
+}
+
+  input[type=password] {
+    width: 40%;
+    /* padding: 12px 20px; */
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: rgba(230, 8, 8, 0);
+    color: rgb(10, 10, 10);
+    font-family: 'Fira Sans', sans-serif;
+  }
+  
+  /* input[type=submit] {
+    background-color: #ddd;
+    border: none;
+    color: black;
+    padding: 10px 120px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    /* cursor: pointer; */
+    /* border-radius: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 22px;
+  } */ 
+  
+  /* select {
+    width: 20%;
+    padding: 12px 120px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(10, 10, 10);
+    font-family: Arial, Helvetica, sans-serif;
+  } */
+  
+  
+
+  /* @media screen and (max-width:500px){
+  
+      .main-contianer{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly; 
+        
+      }
+    
+    } */
