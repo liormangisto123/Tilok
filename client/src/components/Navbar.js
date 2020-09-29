@@ -30,13 +30,8 @@ function Navbar() {
       <nav className='navbar'>
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-<<<<<<< HEAD
-            Tilok
-            {/* <i className='fab fa-typo3' /> */}
-=======
             Tilok <FcGlobe/>
             <i className='fab fa-typo3' />
->>>>>>> origin/master
           </Link>
           <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -67,11 +62,7 @@ function Navbar() {
             </li>
             <li className='nav-item'>
               <Link
-<<<<<<< HEAD
-                to='/SignUp'
-=======
                 to='/signUp'
->>>>>>> origin/master
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
@@ -80,19 +71,11 @@ function Navbar() {
             </li>
             <li className='nav-item'>
               <Link
-<<<<<<< HEAD
-                to='/Login'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                Login
-=======
                 to='/logIn'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
                 Log In
->>>>>>> origin/master
               </Link>
             </li>
             
