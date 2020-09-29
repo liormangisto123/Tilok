@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import '../../components/css/Login.css'
+import '../../components/css/logIn.css'
 
-export default class Login extends Component {
+export default class LogIn extends Component {
     render() {
         return (
             <form className="Login">
