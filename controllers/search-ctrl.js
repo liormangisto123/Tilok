@@ -1,27 +1,27 @@
 const guide = require("../modules/guide-model");
 
 const search = (req, res) => {
-  // const query = {};
-  // if (req.query.country != "" && req.query.country) {
-  //   query.country = req.query.country;
-  // }
-  // if (req.query.lang != "" && req.query.lang) {
-  //   //todo fix query language array
-  //   query.Language = req.query.lang;
-  // }
-  // if (req.query.city != "" && req.query.city) {
-  //   query.city = req.query.city;
-  // }
-  // if (req.query.cost != "" && req.query.cost) {
-  //   query.cost = req.query.cost;
-  // }
+  const query = {};
+  if (req.query.country) {
+    query.country = req.query.country;
+  }
+  if (req.query.lang) {
+    //todo fix query language array
+    query.Language = req.query.lang;
+  }
+  if (req.query.city) {
+    query.city = req.query.city;
+  }
+  if (req.query.cost) {
+    query.cost = req.query.cost;
+  }
 
 
-  const { lang, country,city,cost } = req.params;
-  const q = { Language: lang, country,city,cost }
+  // const { lang, country,city,cost } = req.params;
+  // const q = { Language: lang, country,city,cost }
 debugger
   guide
-    .find(q)
+    .find(query)
     .then((guides) => {
 
       if (!guides.length) {
