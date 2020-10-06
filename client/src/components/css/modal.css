@@ -1,0 +1,30 @@
+.clickOpen {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.closeOpen {
+    content: 'x'; 
+    color:red;
+    font-weight: 800;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    position: absolute;
+    padding: 7px 10px;
+}
+.closeOpen:hover {background: #bbb;}
+
+.about{
+    font-size:large;
+font-weight: 600;
+    color:black;
+    float: right;
+    width: 600px;
+    height: 200px;
+    margin-right: 3%; 
+    margin-top: -10%; 
+    border: black solid 1px;
+}
+ h5{
+    /* border: black solid 1px; */
+    border-bottom: 1px solid black;
+ }

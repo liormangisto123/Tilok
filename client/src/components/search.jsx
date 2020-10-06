@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import AlignItemsList from "./searchResult";
 import { searchGuides } from "../api/index";
+// import '../../src/components/css/searchBar.css'
 // import { ListItemAvatar } from '@material-ui/core';
 
 class Search extends Component {
@@ -13,15 +14,12 @@ class Search extends Component {
       city: "",
       cost: "",
       language: "" /*להוסיף שיהיה מערך */,
-      searchResult: [],
+      searchResult: []
     };
   }
 
   changeHandler = (event) => {
-    // let name = event.target.name;
-    // let value = event.target.value
     const { name, value } = event.target;
-
     this.setState({ [name]: value });
   };
 
@@ -49,13 +47,13 @@ class Search extends Component {
                         name="country"
                         onChange={this.changeHandler}
                         className="form-control search-slt"
-                        placeholder="country"
+                        placeholder="Country"
                       />
                     </div>
                     <div className="col-lg-3 col-md-3 col-sm-12 p-0">
-                      <input
+                      <input 
                         type="text"
-                        name="city"
+                        name="city"r
                         onChange={this.changeHandler}
                         className="form-control search-slt"
                         placeholder="City"
@@ -67,7 +65,7 @@ class Search extends Component {
                         name="cost"
                         onChange={this.changeHandler}
                         className="form-control search-slt"
-                        placeholder="cost"
+                        placeholder="Cost"
                       />
                     </div>
                     <div className="col-lg-3 col-md-3 col-sm-12 p-0">
@@ -91,7 +89,7 @@ class Search extends Component {
                         className="btn btn-danger wrn-btn"
                       >
                         Search
-                      </button>
+                      </button> 
                     </div>
                   </div>
                 </div>

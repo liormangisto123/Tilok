@@ -31,7 +31,7 @@ class SignUp extends Component {
 
                 <button type="submit" className="btn">Sign Up</button>
                 <p className="forgot-password text-left" >
-                    <a href="#">Already registered sign in?</a>
+                    <a href="login">Already registered sign in?</a>
                 </p>
             </form>
         );

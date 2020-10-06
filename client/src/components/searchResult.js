@@ -47,7 +47,6 @@ const useStyles = makeStyles((theme) => ({
                   className={classes.inline}
                   color="textPrimary"
                 >
-                  
                 </Typography>
                 {`cost:${props.cost}
                   Country:${props.country}

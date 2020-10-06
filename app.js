@@ -16,6 +16,8 @@ const touristsRouter = require('./routes/tourist-router');
 const adminRouter = require('./routes/admin-router');
 const loginAndregister= require('./routes/login-Registr-router')
 const search=require('./routes/search-router')
+const CommentGroup=require('./routes/commentGroup-router')
+
 
 const app = express();
 
@@ -35,7 +37,8 @@ app.use(express.static(path.resolve(__dirname, 'client/build')));
 app.use('/api', guidesRouter,touristsRouter,adminRouter,loginAndregister);
 // app.use('/api', touristsRouter);
 // app.use('/api',adminRouter)
-app.use('/api/search',search)
+app.use('/api/search',seccccccccccccarch)
+app.use('/api',CommentGroup)
 
 
 // catch 404 and forward to error handler

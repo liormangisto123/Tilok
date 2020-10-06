@@ -2,7 +2,7 @@
 const axios = require("axios");
 
 const api = axios.create({
-  baseURL: "http://localhost:3001/api",
+  baseURL: "http://localhost:3001/api"
 });
 export const getAllGuides = () => api.get("/guides");
 
@@ -16,3 +16,8 @@ const apis = { getAllGuides, searchGuides };
 export default apis;
 
 // ${country}/lang/${lang}/city/${city}/cost/${cost}
+
+
+
+
+
