@@ -4,6 +4,7 @@ import '../../components/css/Login.css'
 export default class Login extends Component {
     render() {
         return (
+            <div className="container">
             <form className="Login">
                 <div className="title2">
                 <h1>Login</h1>
@@ -17,7 +18,7 @@ export default class Login extends Component {
 
                 <div className="form-group">
                     <label>Password</label>
-                    <input type="password" className="form-control" placeholder="Enter password" />
+                    <input type="text" className="form-control" placeholder="Enter password" />
                 </div>
 
                 {/* <div className="form-group">
@@ -27,11 +28,12 @@ export default class Login extends Component {
                     </div>
                 </div> */}
 
-                <button type="submit" className="btn" width="50">Login</button>
-                <p className="forgot-password text-left">
+                <button type="submit" className="btn-login" width="50">Login</button>
+                <p className="forgot-password">
                      <a href="#">Forgot password ?</a>
                 </p>
             </form>
+            </div>
         );
     }
 }

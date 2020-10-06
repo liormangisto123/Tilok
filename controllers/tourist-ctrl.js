@@ -1,4 +1,4 @@
-const tourist = require('../modules/tourist-model');
+const Tourist = require('../modules/tourist-model');
 
 const createTourist = (req, res) => {
     const body = req.body;
@@ -10,7 +10,7 @@ const createTourist = (req, res) => {
         })
     }
 
-    const tourist = new tourist(body);
+    const tourist = new Tourist(body);
 
     if (!tourist) {
         return res.status(400).json({

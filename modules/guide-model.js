@@ -8,7 +8,7 @@ const tripSchema = new schema({
 });
 
 const commentSchema = new schema({
-  text: { type: String, required: true },
+  text: { type: String },
   date: { type: Date, default: Date.now },
 });
 
