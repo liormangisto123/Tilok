@@ -4,7 +4,7 @@ const schema = mongoose.Schema;
 
 const tripSchema = new schema({
   description: { type: String, required: true },
-  name: { type: String, required: true },
+  name: [{ type: String, required: true }],
 });
 
 const commentSchema = new schema({
@@ -27,6 +27,7 @@ const guideSchema = new schema(
     Language: [{ type: String, required: true }],
     trips: [tripSchema],
     comments: [commentSchema],
+    summery:{type:String,required:true}
   },
   { timestamps: true }
 );

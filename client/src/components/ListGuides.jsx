@@ -48,9 +48,14 @@ const ListGuides = () => {
                             pic={item.pic}
                             first_name={item.first_name}
                             last_name={item.last_name}
-                            cost={item.cost}
-                            country={item.country}
-                            city={item.city}
+                            summery={item.summery}
+                            Experience={item.trips.map((item)=>{
+                                return(<span>{item.name+" | "}</span>)
+                            })}
+                       
+                            Language={item.Language.map((item)=>{
+                                return(<span>{item+" | "}</span>)
+                            })}
 
                         // to="/"
                         />

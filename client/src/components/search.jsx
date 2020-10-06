@@ -51,7 +51,7 @@ const Search = (props) => {
             <div className="row">
               <div className="col-lg-12">
                 <div className="row">
-                  <div className=" col-md-2.5 p-0">
+                  <div className=" col-md-3 p-0">
                     <input
                       type="text"
                       name="country"
@@ -60,7 +60,7 @@ const Search = (props) => {
                       placeholder="Country"
                     />
                   </div>
-                  <div className=" col-md-2.5 p-0">
+                  <div className=" col-md-3 p-0">
                     <input
                       type="text"
                       name="city"
@@ -69,7 +69,7 @@ const Search = (props) => {
                       placeholder="City"
                     />
                   </div>
-                  <div className=" col-md-2.5 p-0">
+                  <div className=" col-md-2 p-0">
                     <input
                       type="text"
                       name="cost"
@@ -78,21 +78,21 @@ const Search = (props) => {
                       placeholder="Cost"
                     />
                   </div>
-                  <div className=" col-md-2.5 p-0">
+                  <div className=" col-md-3 p-0">
                     <select
                       name="language"
                       onChange={changeHandler}
                       className="form-control search-slt"
                       id="exampleFormControlSelect1"
                     >
-                      <option>Language</option>
+                      <option>Select Language</option>
                       <option>spanish</option>
                       <option>hebrew</option>
                       <option>english</option>
                       <option>french</option>
                     </select>
                   </div>
-                  <div  className=" col-md-1 p-0">
+                  <div style={{marginTop:7}}  className=" col-md-1 p-0">
                     <button
                       type="button"
                       onClick={getSearchResult}
