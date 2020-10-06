@@ -3,25 +3,52 @@
 /* * {
   box-sizing: border-box;
 } */
+/* body{
+  background: url('/assets/img9.jpg') center center/cover no-repeat;
+} */
+
+label{
+  color:white
+}
+.container{
+  display: flex;
+  justify-content: center;
+ 
+}
 .Login {
+  /* display: flex; */
+  /* justify-content: center; */
+  margin-top:10%;
+  opacity: 0.8;
+  background-color: #5F9EA0;
+  border-radius: 25px;
   direction: ltr;
   text-align: left;
-  width: 900px;
+  /* width: 900px; */
   padding: 1%;
   font-family: 'Fira Sans', sans-serif;
   font-size: 17px;
-  width: 800px;
+  width: 600px;
   padding: 10px 60px;
 
 }
 
+.form-group{
+  /* text-align: center; */
+  align-items: center;
+  margin-left:13%;
+}
+/* .form-group input{
+  margin-left:50%;
+} */
+
 .title2 {
   font-size: 55px;
-  color: black;
+  color: white;
   font-weight: bold;
   font-family: 'Fira Sans', sans-serif;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 10%;
+  margin-bottom: 5%;
   text-align: center;
 }
 
@@ -35,7 +62,7 @@ body, html, .App, #root, .auth-wrapper {
   height: 100%;
 }
 
-.btn{
+.btn-login{
   background-color:blue;
   border: none;
   color: white;
@@ -44,11 +71,16 @@ body, html, .App, #root, .auth-wrapper {
   /* text-decoration: none; */
   /* display: inline-block; */
   font-size: 16px;
-  margin: 4px 2px;
+  width: 20%;
+  margin: 5% 2px 0px 40%;
   cursor: pointer;
   font-family: 'Fira Sans', sans-serif;
   
-} 
+}
+.forgot-password{
+  margin-left: 30%;
+  margin-top: 5%;
+}
 
 /* .navbar-light {
   background-color: #ffffff;
