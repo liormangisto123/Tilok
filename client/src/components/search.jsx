@@ -1,27 +1,5 @@
 import React, { Component, useContext, useEffect, useState } from "react";
 import { searchGuides } from "../api/index";
-<<<<<<< HEAD
-// import '../../src/components/css/searchBar.css'
-// import { ListItemAvatar } from '@material-ui/core';
-
-class Search extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      items: [],
-      filterItems: [],
-      country: "",
-      city: "",
-      cost: "",
-      language: "" /*להוסיף שיהיה מערך */,
-      searchResult: []
-    };
-  }
-
-  changeHandler = (event) => {
-    const { name, value } = event.target;
-    this.setState({ [name]: value });
-=======
 import { AppContext } from "../context/appContext";
 // import { ListItemAvatar } from '@material-ui/core';
 
@@ -42,7 +20,6 @@ const Search = (props) => {
     const { name, value } = event.target;
 
     setState({ ...state, [name]: value });
->>>>>>> master
   };
 
   const getSearchResult = async () => {
@@ -63,68 +40,6 @@ const Search = (props) => {
     }
   };
 
-<<<<<<< HEAD
-  render() {
-    const { filterItems } = this.state;
-    return (
-      <div>
-        <section className="search-sec">
-          <div className="container">
-            <form action="#" method="post" novalidate="novalidate">
-              <div className="row">
-                <div className="col-lg-12">
-                  <div className="row">
-                    <div className="col-lg-3 col-md-3 col-sm-12 p-0">
-                      <input
-                        type="text"
-                        name="country"
-                        onChange={this.changeHandler}
-                        className="form-control search-slt"
-                        placeholder="Country"
-                      />
-                    </div>
-                    <div className="col-lg-3 col-md-3 col-sm-12 p-0">
-                      <input 
-                        type="text"
-                        name="city"r
-                        onChange={this.changeHandler}
-                        className="form-control search-slt"
-                        placeholder="City"
-                      />
-                    </div>
-                    <div className="col-lg-3 col-md-3 col-sm-12 p-0">
-                      <input
-                        type="text"
-                        name="cost"
-                        onChange={this.changeHandler}
-                        className="form-control search-slt"
-                        placeholder="Cost"
-                      />
-                    </div>
-                    <div className="col-lg-3 col-md-3 col-sm-12 p-0">
-                      <select
-                        name="language"
-                        onChange={this.changeHandler}
-                        className="form-control search-slt"
-                        id="exampleFormControlSelect1"
-                      >
-                        <option>Select Language</option>
-                        <option>spanish</option>
-                        <option>hebrew</option>
-                        <option>english</option>
-                        <option>french</option>
-                      </select>
-                    </div>
-                    <div className="col-lg-3 col-md-3 col-sm-12 p-0">
-                      <button
-                        type="button"
-                        onClick={this.getSearchResult}
-                        className="btn btn-danger wrn-btn"
-                      >
-                        Search
-                      </button> 
-                    </div>
-=======
 
 
   const { filterItems } = state;
@@ -136,7 +51,7 @@ const Search = (props) => {
             <div className="row">
               <div className="col-lg-12">
                 <div className="row">
-                  <div className=" col-md-2.5 p-0">
+                  <div className=" col-md-3 p-0">
                     <input
                       type="text"
                       name="country"
@@ -145,7 +60,7 @@ const Search = (props) => {
                       placeholder="Country"
                     />
                   </div>
-                  <div className=" col-md-2.5 p-0">
+                  <div className=" col-md-3 p-0">
                     <input
                       type="text"
                       name="city"
@@ -154,7 +69,7 @@ const Search = (props) => {
                       placeholder="City"
                     />
                   </div>
-                  <div className=" col-md-2.5 p-0">
+                  <div className=" col-md-2 p-0">
                     <input
                       type="text"
                       name="cost"
@@ -163,21 +78,21 @@ const Search = (props) => {
                       placeholder="Cost"
                     />
                   </div>
-                  <div className=" col-md-2.5 p-0">
+                  <div className=" col-md-3 p-0">
                     <select
                       name="language"
                       onChange={changeHandler}
                       className="form-control search-slt"
                       id="exampleFormControlSelect1"
                     >
-                      <option>Language</option>
+                      <option>Select Language</option>
                       <option>spanish</option>
                       <option>hebrew</option>
                       <option>english</option>
                       <option>french</option>
                     </select>
                   </div>
-                  <div  className=" col-md-1 p-0">
+                  <div style={{marginTop:7}}  className=" col-md-1 p-0">
                     <button
                       type="button"
                       onClick={getSearchResult}
@@ -186,7 +101,6 @@ const Search = (props) => {
                     >
                       Search
                     </button>
->>>>>>> master
                   </div>
                 </div>
               </div>

@@ -30,21 +30,13 @@ function Cards() {
               path='/services'
             />
             <CardItem
-<<<<<<< HEAD
-              src='pictures/Extreme.jpg'
-=======
               src='assets/south.jpg'
->>>>>>> master
               text='Experience Football on Top of the Himilayan Mountains'
               label='Adventure'
               path='/products'
             />
             <CardItem
-<<<<<<< HEAD
-              src='pictures/Extreme.jpg'
-=======
               src='assets/la.jpg'
->>>>>>> master
               text='Ride through the Sahara Desert on a guided camel tour'
               label='Adrenaline'
               path='/signUp'

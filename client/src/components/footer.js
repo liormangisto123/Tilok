@@ -2,7 +2,7 @@ import React from 'react'
 import { Button } from './Button';
 import { Link } from 'react-router-dom'
 // import { Facebook } from 'react-social-icons';
-import { FiYoutube,FiTwitter,FiInstagram, } from "react-icons/fi";
+import { FiYoutube,FiTwitter,FiInstagram } from "react-icons/fi";
 import {FaFacebook} from 'react-icons/fa'
 
 

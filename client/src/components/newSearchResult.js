@@ -1,5 +1,7 @@
 import React from "react";
 import "../components/css/searchResult.css";
+import { AiOutlineGlobal, AiFillDatabase } from 'react-icons/ai';
+
 
 export default function SearchResults(props) {
   // const classes = useStyles();
@@ -20,32 +22,59 @@ export default function SearchResults(props) {
               </a>
             </div>
 
-            <div class="col-xs-12 col-sm-12 col-md-7 excerpet">
-              <h3>
-                <a href="#" title="">
-                  {props.first_name + " " + props.last_name}
-                </a>
-              </h3>
-              <ul>
-                <li>Country:{props.country}</li>
-                <li>City:{props.city}</li>
-                <li>Cost:{props.cost}</li>
-              </ul>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-2">
-              <ul class="meta-search">
-                <li>
-                  <i class="glyphicon glyphicon-calendar"></i>{" "}
-                  <div class="rating">
-                    <span>☆</span>
-                    <span>☆</span>
-                    <span>☆</span>
-                    <span>☆</span>
-                    <span>☆</span>
+            <div class="col-xs-12 col-sm-12 col-md-9 excerpet">
+              <div className="info">
+                <h3>
+                  <a href="#" title="">
+                    {props.first_name + " " + props.last_name}
+                  </a>
+                </h3>
+                <div >
+                  <ul >
+                    <li>
+                      <div class="rating">
+                        <span>☆</span>
+                        <span>☆</span>
+                        <span>☆</span>
+                        <span>☆</span>
+                        <span>☆</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <span>
+
+                  summery:
+
+              </span>
+                <div>{props.summery}</div>
+
+                <div className="ex-la-minediv">
+
+
+                  <div className="ex-la">
+                    <ul>
+
+                      <li><AiFillDatabase /> Experience:</li>
+
+                      <li>{props.Experience}</li>
+                    </ul>
                   </div>
-                </li>
-              </ul>
+
+                  <div className="ex-la A">
+                    <ul>
+
+                      <li><AiOutlineGlobal />Language:</li>
+
+                      <li>{props.Language}</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
             </div>
+
+
             <span class="clearfix borda"></span>
           </article>
         </div>
