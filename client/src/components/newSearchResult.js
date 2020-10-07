@@ -44,10 +44,10 @@ export default function SearchResults(props) {
                 </div>
                 <span>
 
-                  summery:
+                  summary:
 
               </span>
-                <div>{props.summery}</div>
+                <div>{props.summary}</div>
 
                 <div className="ex-la-minediv">
 
