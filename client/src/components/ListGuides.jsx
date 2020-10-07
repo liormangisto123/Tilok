@@ -49,6 +49,7 @@ const ListGuides = () => {
                             first_name={item.first_name}
                             last_name={item.last_name}
                             summary={item.summary}
+                            comments={item.comments}
                             Experience={item.trips.map((item)=>{
                                 return(<span>{item.name+" | "}</span>)
                             })}

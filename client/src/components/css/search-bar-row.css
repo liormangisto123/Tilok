@@ -1,0 +1,23 @@
+.search-row{
+    padding: 10px;
+    background: rgba(126, 166, 147, 0.5);
+    border-radius: 5px;
+    align-items: center;
+    padding-right: 2%;
+}
+select[name=language] {
+    width: 80%;
+    margin: 8px;
+    border-radius: 10px;
+    font-family: 'Fira Sans', sans-serif;
+    /* box-shadow: 0 8px 6px -6px black; */
+}
+input.form-control.search-slt {
+    border-radius: 10px;
+}
+select#exampleFormControlSelect1 {
+    border-radius: 10px;
+}
+button.btn.btn-danger.wrn-btn {
+    border-radius: 10px;
+}

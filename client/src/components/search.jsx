@@ -1,6 +1,7 @@
 import React, { Component, useContext, useEffect, useState } from "react";
 import { searchGuides } from "../api/index";
 import { AppContext } from "../context/appContext";
+import "../components/css/search-bar-row.css";
 // import { ListItemAvatar } from '@material-ui/core';
 
 const Search = (props) => {
@@ -50,7 +51,7 @@ const Search = (props) => {
           <form action="#" method="post" noValidate="novalidate">
             <div className="row">
               <div className="col-lg-12">
-                <div className="row">
+                <div className="row search-row">
                   <div className=" col-md-3 p-0">
                     <input
                       type="text"
@@ -92,7 +93,7 @@ const Search = (props) => {
                       <option>french</option>
                     </select>
                   </div>
-                  <div style={{marginTop:7}}  className=" col-md-1 p-0">
+                  <div  className=" col-md-1 p-0">
                     <button
                       type="button"
                       onClick={getSearchResult}

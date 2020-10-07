@@ -2,7 +2,6 @@
 
 .rating {
   unicode-bidi: bidi-override;
-  direction: rtl;
   margin-top: 0%;
   width: 150px;
 
@@ -15,8 +14,9 @@
   color: #febb01;
   
 }
-.rating > span:hover:before,
-.rating > span:hover ~ span:before {
+
+.rating > .full:before
+ {
   content: "\2605";
   position: absolute;
 }

@@ -5,7 +5,8 @@ import { AiOutlineGlobal, AiFillDatabase } from 'react-icons/ai';
 
 export default function SearchResults(props) {
   // const classes = useStyles();
-
+  const ratingsArray = (props.comments ||[]).filter(({rating})=>!!rating).map(({rating})=> rating);
+  const arrAvg = ratingsArray.length?  ratingsArray.reduce((a,b) => a + b, 0) / ratingsArray.length: 0;
   return (
     <div class="container">
       <section class="col-xs-12 col-sm-6 col-md-12">
@@ -33,11 +34,10 @@ export default function SearchResults(props) {
                   <ul >
                     <li>
                       <div class="rating">
-                        <span>☆</span>
-                        <span>☆</span>
-                        <span>☆</span>
-                        <span>☆</span>
-                        <span>☆</span>
+                        {[0,1,2,3,4].map((i)=> {
+                          return <span className={i<arrAvg? "full": ""}>☆</span>
+                        })}
+                      
                       </div>
                     </li>
                   </ul>

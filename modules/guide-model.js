@@ -10,6 +10,7 @@ const tripSchema = new schema({
 const commentSchema = new schema({
   text: { type: String },
   date: { type: Date, default: Date.now },
+  rating:{type:Number , default: 2 }
 });
 
 const guideSchema = new schema(
