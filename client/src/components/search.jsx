@@ -26,13 +26,12 @@ const Search = (props) => {
   const getSearchResult = async () => {
     const { language, country, city, cost } = state;
     const response = await searchGuides(
-      country.trim().toLowerCase(),
-      language.trim().toLowerCase(),
-      city.trim().toLowerCase(),
-      cost.trim().toLowerCase()
+      country.trim().toUpperCase(),
+      language.trim().toUpperCase(),
+      city.trim().toUpperCase(),
+      cost.trim().toUpperCase()
 
     );
-    console.log(country.trim().toLowerCase())
     const guides = response.data.data;
 
     appContext.setState({ filterItems: guides });
@@ -87,10 +86,10 @@ const Search = (props) => {
                       id="exampleFormControlSelect1"
                     >
                       <option>Select Language</option>
-                      <option>spanish</option>
-                      <option>hebrew</option>
-                      <option>english</option>
-                      <option>french</option>
+                      <option>Spanish</option>
+                      <option>Hebrew</option>
+                      <option>English</option>
+                      <option>French</option>
                     </select>
                   </div>
                   <div  className=" col-md-1 p-0">

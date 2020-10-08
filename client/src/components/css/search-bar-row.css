@@ -5,19 +5,18 @@
     align-items: center;
     padding-right: 2%;
 }
-select[name=language] {
-    width: 80%;
-    margin: 8px;
-    border-radius: 10px;
-    font-family: 'Fira Sans', sans-serif;
-    /* box-shadow: 0 8px 6px -6px black; */
-}
+
 input.form-control.search-slt {
-    border-radius: 10px;
+    border-radius: 5px;
 }
 select#exampleFormControlSelect1 {
-    border-radius: 10px;
+    border-radius: 5px;
 }
 button.btn.btn-danger.wrn-btn {
-    border-radius: 10px;
+    border-radius: 5px;
+}
+.btn-danger {
+    color: #fff;
+    background-color: #5F9EA0;
+    border-color: #5F9EA0;
 }

@@ -1,12 +1,17 @@
 import React from "react";
 import "../components/css/searchResult.css";
-import { AiOutlineGlobal, AiFillDatabase } from 'react-icons/ai';
-
+import { AiOutlineGlobal, AiFillDatabase } from "react-icons/ai";
 
 export default function SearchResults(props) {
   // const classes = useStyles();
-  const ratingsArray = (props.comments ||[]).filter(({rating})=>!!rating).map(({rating})=> rating);
-  const arrAvg = ratingsArray.length?  ratingsArray.reduce((a,b) => a + b, 0) / ratingsArray.length: 0;
+  const ratingsArray = (props.comments || [])
+    .filter(({ rating }) => !!rating)
+    .map(({ rating }) => rating);
+  const arrAvg = ratingsArray.length
+    ? ratingsArray.reduce((a, b) => a + b, 0) / ratingsArray.length
+    : 0;
+    // props.array.map(obj=> ({ ...obj, ratingAvg: arrAvg }))  
+
   return (
     <div class="container">
       <section class="col-xs-12 col-sm-6 col-md-12">
@@ -16,7 +21,7 @@ export default function SearchResults(props) {
               <a href="#" title="view profile" class="thumbnail">
                 <img
                   width="200px"
-                  height="150px"
+                  height="180px"
                   src={props.pic}
                   alt="guide pic"
                 />
@@ -30,50 +35,45 @@ export default function SearchResults(props) {
                     {props.first_name + " " + props.last_name}
                   </a>
                 </h3>
-                <div >
-                  <ul >
+                <div>
+                  <ul>
                     <li>
                       <div class="rating">
-                        {[0,1,2,3,4].map((i)=> {
-                          return <span className={i<arrAvg? "full": ""}>☆</span>
+                        {[0, 1, 2, 3, 4].map((i) => {
+                          return (
+                            <span className={i < arrAvg ? "full" : ""}>☆</span>
+                          );
                         })}
-                      
                       </div>
                     </li>
                   </ul>
                 </div>
-                <span>
-
-                  summary:
-
-              </span>
+                <span>summary:</span>
                 <div>{props.summary}</div>
 
                 <div className="ex-la-minediv">
-
-
                   <div className="ex-la">
                     <ul>
-
-                      <li><AiFillDatabase /> Experience:</li>
+                      <li>
+                        <AiFillDatabase /> Experience:
+                      </li>
 
                       <li>{props.Experience}</li>
                     </ul>
                   </div>
 
                   <div className="ex-la A">
-                    <ul>
-
-                      <li><AiOutlineGlobal />Language:</li>
+                    <ul id="lang-list">
+                      <li>
+                        <AiOutlineGlobal /> Language:
+                      </li>
 
                       <li>{props.Language}</li>
                     </ul>
                   </div>
                 </div>
               </div>
-
             </div>
-
 
             <span class="clearfix borda"></span>
           </article>
