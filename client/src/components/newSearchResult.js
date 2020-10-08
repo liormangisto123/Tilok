@@ -49,7 +49,7 @@ export default function SearchResults(props) {
                   </ul>
                 </div>
                 <span>summary:</span>
-                <div>{props.summary}</div>
+                <div className="summary">{props.summary}</div>
 
                 <div className="ex-la-minediv">
                   <div className="ex-la">
