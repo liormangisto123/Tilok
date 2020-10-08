@@ -3,7 +3,7 @@ const commentCtrl = require('../controllers/commentGroup-ctrl');
 
 const router = express.Router();
 
-router.post('api/comment', commentCtrl.comments)
+router.post('/comment', commentCtrl.comments)
 
 
 module.exports = router;

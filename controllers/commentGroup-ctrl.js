@@ -31,24 +31,47 @@ const comments = (req, res) => {
         })
     }
 
-    Comment.save()
-        .then(() => {
-            return res.status(201).json({
-                success: true,
-                id: Comment._id,
-                message: 'Comment added!'
-            })
-        })
-        .catch(error => {
-            console.log(error)
-            return res.status(400).json({
-                error,
-                message: 'Comment not added!'
+    const commentField = {};
+    commentField.guide = req.guide.id;
+        try {
+            let Guide =  guide.findOne({ guides: req.guide.id });
 
-            })
+            if (Guide) {
+                Guide =  guide.insert(
+                    { guide: req.guide.id },
+                    { $set: commentField },
+                    { new: true });
 
-        })
-}
+                return res.json(Guide);
+            }
+            Guide = new guide(commentField);
+            Guide.save();
+            res.json(Guide);
+        } catch (err) {
+            console.error(err.message);
+            res.status(500).send('Server Error');
+        }
+    };
+
+
+    // Comment.save()
+    //     .then(() => {
+    //         return res.status(201).json({
+    //             success: true,
+    //             id: Comment._id,
+    //             message: 'Comment added!'
+    //         })
+    //     })
+    //     .catch(error => {
+    //         console.log(error)
+    //         return res.status(400).json({
+    //             error,
+    //             message: 'Comment not added!'
+
+    //         })
+
+    //     })
+
 
 module.exports = {
          comments

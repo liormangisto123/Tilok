@@ -37,7 +37,7 @@ app.use(express.static(path.resolve(__dirname, 'client/build')));
 app.use('/api', guidesRouter,touristsRouter,adminRouter,loginAndregister);
 // app.use('/api', touristsRouter);
 // app.use('/api',adminRouter)
-app.use('/api/search',seccccccccccccarch)
+app.use('/api/search',search)
 app.use('/api',CommentGroup)
 
 

@@ -1,6 +1,9 @@
 import React from "react";
 import "../components/css/searchResult.css";
 import { AiOutlineGlobal, AiFillDatabase } from 'react-icons/ai';
+import Modal from '../../src/components/pages/profile'
+
+
 
 
 export default function SearchResults(props) {
@@ -8,24 +11,22 @@ export default function SearchResults(props) {
 
   return (
     <div class="container">
+
       <section class="col-xs-12 col-sm-6 col-md-12">
         <div class="singleResult">
           <article class="search-result row">
             <div class="col-xs-12 col-sm-12 col-md-3">
-              <a href="#" title="view profile" class="thumbnail">
-                <img
-                  width="200px"
-                  height="150px"
-                  src={props.pic}
-                  alt="guide pic"
-                />
-              </a>
+      
+            <Modal text={props.first_name+' '+props.last_name} src={props.pic} country={props.country} cost={props.cost} com={props.com}
+                            date={props.date} summary={props.summary} />
+                
+              {/* </a> */}
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-9 excerpet">
               <div className="info">
                 <h3>
-                  <a href="#" title="">
+                  <a href="Modal" title="">
                     {props.first_name + " " + props.last_name}
                   </a>
                 </h3>
@@ -44,10 +45,10 @@ export default function SearchResults(props) {
                 </div>
                 <span>
 
-                  summery:
+                summary:
 
               </span>
-                <div>{props.summery}</div>
+                <div>{props.summary}</div>
 
                 <div className="ex-la-minediv">
 
@@ -76,6 +77,7 @@ export default function SearchResults(props) {
 
 
             <span class="clearfix borda"></span>
+            
           </article>
         </div>
       </section>

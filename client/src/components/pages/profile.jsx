@@ -43,7 +43,7 @@ export default class Examples extends Component {
     return (
       <section>
         {/* { <input type="button" value="Open" onClick={() => this.openModal()} /> */}
-        <img className='cards_item_img' alt='Travel Image' src={this.props.src} onClick={() => this.openModal()} width="180px"
+        <img className='cards_item_img' alt='Click' src={this.props.src} onClick={() => this.openModal()} width="180px"
           height="160px" />
         <h5 className='clickOpen' onClick={() => this.openModal()}>{this.props.text} </h5>
 
@@ -59,11 +59,10 @@ export default class Examples extends Component {
               <br></br>
               <h4>Cost:{this.props.cost}</h4>
             </div>
-            <div>
 
-            </div>
             <div>
               <img src={this.props.src} height="200px" width="250px" />
+              
             </div>
           </div>
           <div >
@@ -71,7 +70,8 @@ export default class Examples extends Component {
               <h5>
                 About My
               </h5>
-              {this.props.summery}
+              {this.props.summary}
+              {/* <button id="read-more-about_short_eng" class="btn sm-btn white-btn showmore-btn">Read more</button> */}
             </p>
             {/* <p className="about">
               <table border="1" cellpadding="10" height="40%" width="100%">

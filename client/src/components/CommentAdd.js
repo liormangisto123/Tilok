@@ -5,6 +5,7 @@ function CommentAdd(props) {
     const { handleCommentSubmit } = props;
     const [comment,setComment]=useState('');
     return (
+        <form action="/api/comment" method="POST"> 
         <div className="Commands">
             <div className="card mt-4 mb-3">
                 <div className="card-header"><strong>Comments</strong></div>
@@ -22,6 +23,7 @@ function CommentAdd(props) {
                 {/* <button className="btn btn-warning">Close issue</button> */}
             </div>
         </div>
+        </form>
 
     );
 }
