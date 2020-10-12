@@ -14,9 +14,13 @@ select#exampleFormControlSelect1 {
 }
 button.btn.btn-danger.wrn-btn {
     border-radius: 5px;
+    margin-left: 10%;
 }
 .btn-danger {
     color: #fff;
     background-color: #5F9EA0;
     border-color: #5F9EA0;
 }
+
+
+
