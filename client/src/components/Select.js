@@ -1,8 +1,8 @@
-import React, {  useContext } from "react";
+import React from "react";
 import Select from "react-select";
 import "./css/Select.css";
 import $ from "jquery";
-import { AppContext } from "../context/appContext";
+
 
 class Selected extends React.PureComponent {
    
@@ -20,7 +20,7 @@ class Selected extends React.PureComponent {
 
   };
   componentDidMount(){
-    const appContext = useContext(AppContext);
+    
     $(document).ready(()=>{
         $(".css-1wa3eu0-placeholder").text(this.props.country);
         $(".css-1wa3eu0-placeholder").text(this.props.city);
