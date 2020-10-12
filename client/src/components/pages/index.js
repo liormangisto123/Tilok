@@ -1,7 +1,7 @@
 
 import Guides from './Guides'
 import Home from './Home'
-import LogIn from './logIn'
+import LogIn from './login'
 import SingUp from './singUp'
 
 export{
