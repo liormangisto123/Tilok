@@ -1,0 +1,26 @@
+.search-row{
+    padding: 10px;
+    background: rgba(126, 166, 147, 0.5);
+    border-radius: 5px;
+    align-items: center;
+    padding-right: 2%;
+}
+
+input.form-control.search-slt {
+    border-radius: 5px;
+}
+select#exampleFormControlSelect1 {
+    border-radius: 5px;
+}
+button.btn.btn-danger.wrn-btn {
+    border-radius: 5px;
+    margin-left: 10%;
+}
+.btn-danger {
+    color: #fff;
+    background-color: #5F9EA0;
+    border-color: #5F9EA0;
+}
+
+
+

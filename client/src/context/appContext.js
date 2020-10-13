@@ -2,6 +2,10 @@ import React, { createContext, useState } from "react";
 
 const initialState = {
     filterItems: [],
+    country:[],
+    city:[],
+    language:[],
+    
 };
 
 export const AppContext = createContext(initialState);

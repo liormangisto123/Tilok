@@ -46,9 +46,9 @@
   margin: 0;
   /* margin-right: 2rem; */
 }
-
-.nav-item {
-  /* height: 80px; */
+a:hover {
+  color: white;
+   text-decoration: none
 }
 
 .btn-box {
