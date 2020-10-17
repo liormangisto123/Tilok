@@ -114,6 +114,7 @@ hgroup h2.lead {
 }
 
 .singleResult {
+  border-radius: 5px;
   /* height: 34vh; */
   background: #f5f5f5;
   /* border: 1px solid #a9a9a9; */
@@ -146,14 +147,6 @@ hgroup h2.lead {
   /* border: 1px solid #A9A9A9; */
 }
 
-button.sortBtn {
-  width: 20%;
-  margin: 8px 0 0 3%;
-  border-radius: 5px;
-  font-family: "Fira Sans", sans-serif;
-  /* box-shadow: 0 8px 6px -6px black; */
-  background-color: white;
-}
 .row {
   margin-top: 5%;
 }
@@ -168,6 +161,20 @@ button.sortBtn {
 .ex-la.A {
   margin-left: 20%;
 }
+.ex-la.B {
+  margin-left: 3%;
+}
+.ex-la.B li {
+  font-weight: bold;
+  font-size:large;
+  color:black
+}
+.ex-la-minediv {
+  
+  width: 80%;
+  display: inline-block;
+}
+
 
 .info {
   padding-top: 2%;
@@ -185,4 +192,7 @@ form {
 .summary {
   min-height: 6vh;
   max-height: 7vh;
+}
+img{
+  border-radius: 5px;
 }

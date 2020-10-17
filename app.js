@@ -6,6 +6,13 @@ const logger = require('morgan');
 const cors = require('cors')
 
 
+// const path = require('path');
+// const cookieParser = require('cookie-parser');
+// const logger = require('morgan');
+// const cors = require('cors')
+
+
+
 
 
 
@@ -16,8 +23,12 @@ const touristsRouter = require('./routes/tourist-router');
 const adminRouter = require('./routes/admin-router');
 const loginAndregister= require('./routes/login-Registr-router')
 const search=require('./routes/search-router')
+<<<<<<< HEAD
 const CommentGroup=require('./routes/commentGroup-router')
 
+=======
+const profile=require('./routes/profile-router')
+>>>>>>> master
 
 const app = express();
 
@@ -40,7 +51,7 @@ app.use('/api', guidesRouter,touristsRouter,adminRouter,loginAndregister);
 app.use('/api/search',search)
 app.use('/api',CommentGroup)
 
-
+app.use('/myProfile',profile)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
@@ -59,3 +70,4 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+

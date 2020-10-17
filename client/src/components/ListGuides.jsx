@@ -1,9 +1,13 @@
 import React, { useContext } from "react";
 import { AppContext } from "../context/appContext";
 import SearchResults from "./newSearchResult";
+<<<<<<< HEAD
 import ListDisplay from '../components/ListDisplay';
 import Modal from '../../src/components/pages/profile'
 
+=======
+import "../components/css/listGuides.css"
+>>>>>>> master
 const ListGuides = () => {
   const appContext = useContext(AppContext);
 
@@ -100,36 +104,55 @@ export default ListGuides;
             </h2>
           </hgroup>
         ) : (
-          ""
-        )}
+            ""
+          )}
         {appContext.state.filterItems.length != 0 ? (
           <div>
             <span>
-              <button type="button" onClick={sortByCost} className="sortBtn">
+              <button type="button" onClick={sortByCost} className="sortBtn-A">
                 Price lowest first
               </button>
             </span>
             <span>
-              <button type="button" onClick={sortByRating} className="sortBtn">
+              <button type="button" onClick={sortByRating} className="sortBtn-B">
                 Top rated
               </button>
             </span>
           </div>
         ) : (
-          ""
-        )}
+            ""
+          )}
       </div>
 
       {appContext.state.filterItems &&
         appContext.state.filterItems.map((item, index) => (
           <div className="results" key={index}>
             <SearchResults
-              array={item}
+              // array={this.item}
+              profile_summary={item.profile_summary}
+              id={item._id}
               pic={item.pic}
               first_name={item.first_name}
               last_name={item.last_name}
+              country={item.country}
+              city={item.city}
+              cost={item.cost}
               summary={item.summary}
+              email={item.email}
+              phone={item.phone}
               comments={item.comments}
+              text={item.comments.map((comment) => {
+                return comment.text
+              })}
+              date={item.comments.map((date) => (
+                date.date
+              ))}
+              // Experience={item.trips.map((item) => {
+              //   return (<span>{item.name + " | "}</span>)
+              // })}
+              // Language={item.Language.map((item) => {
+              //   return (<span>{item + " | "}</span>)
+              // })}
               Experience={item.trips.map((t, i) => {
                 const rowLen = item.trips.length;
                 if (rowLen === i + 1) {
@@ -151,5 +174,9 @@ export default ListGuides;
   );
 };
 
+<<<<<<< HEAD
+export default ListGuides;
+>>>>>>> master
+=======
 export default ListGuides;
 >>>>>>> master

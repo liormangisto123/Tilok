@@ -3,6 +3,21 @@
 /* * {
   box-sizing: border-box;
 } */
+<<<<<<< HEAD
+=======
+/* body{
+  background: url('/assets/img9.jpg') center center/cover no-repeat;
+} */
+
+label-name{
+  color:white
+}
+.container{
+  display: flex;
+  justify-content: center;
+ 
+}
+>>>>>>> master
 .Login {
   direction: ltr;
   text-align: left;

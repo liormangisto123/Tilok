@@ -8,8 +8,13 @@ import Modal from '../../src/components/pages/profile'
 
 =======
 import { AiOutlineGlobal, AiFillDatabase } from "react-icons/ai";
+<<<<<<< HEAD
 >>>>>>> master
 
+=======
+import { BiDollar } from "react-icons/bi";
+import { Link } from 'react-router-dom';
+>>>>>>> master
 export default function SearchResults(props) {
   // const classes = useStyles();
   const ratingsArray = (props.comments || [])
@@ -18,7 +23,7 @@ export default function SearchResults(props) {
   const arrAvg = ratingsArray.length
     ? ratingsArray.reduce((a, b) => a + b, 0) / ratingsArray.length
     : 0;
-    // props.array.map(obj=> ({ ...obj, ratingAvg: arrAvg }))  
+  // props.array.map(obj=> ({ ...obj, ratingAvg: arrAvg }))
 
   return (
     <div class="container">
@@ -36,8 +41,8 @@ export default function SearchResults(props) {
 =======
               <a href="#" title="view profile" class="thumbnail">
                 <img
-                  width="200px"
-                  height="180px"
+                  width="100%%"
+                  height="195vh"
                   src={props.pic}
                   alt="guide pic"
                 />
@@ -48,9 +53,35 @@ export default function SearchResults(props) {
             <div class="col-xs-12 col-sm-12 col-md-9 excerpet">
               <div className="info">
                 <h3>
+<<<<<<< HEAD
                   <a href="Modal" title="">
+=======
+                <Link to={{
+                    pathname:`/guides/${props.id}`,
+                    state: {
+                      first_name:props.first_name,
+                      last_name:props.last_name,
+                      country: props.country,
+                      city:props.city,
+                      pic: props.pic,
+                      cost: props.cost+ '$',
+                      sum: props.summary,
+                      profile_sum:props.profile_summary,
+                      text:  props.text,
+                      date : props.date,
+                      email:props.email,
+                      phone:props.phone,
+                      comments:props.comments,
+                    }
+                    
+                   
+                  }}>
+                    {props.first_name + " " + props.last_name} 
+                  </Link>
+                  {/* <a href="#" title="">
+>>>>>>> master
                     {props.first_name + " " + props.last_name}
-                  </a>
+                  </a> */}
                 </h3>
                 <div>
                   <ul>
@@ -97,6 +128,14 @@ export default function SearchResults(props) {
                       <li>{props.Language}</li>
                     </ul>
                   </div>
+                </div>
+                <div className="ex-la B">
+                  <ul>
+                    <li>
+                      {props.cost}<BiDollar/>/day
+                      
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>

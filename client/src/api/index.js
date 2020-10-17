@@ -5,10 +5,13 @@ const api = axios.create({
   baseURL: "http://localhost:3001/api"
 });
 export const getAllGuides = () => api.get("/guides");
-
-export const searchGuides = (country, lang, city, cost) =>
+export const searchGuideById = (id) =>
   api.get(
-    `search?${new URLSearchParams({ country, lang, city, cost }).toString()}`
+    `guides/:${id}`
+  );
+export const searchGuides = (country, lang, city, cost,comments) =>
+  api.get(
+    `search?${new URLSearchParams({ country, lang, city, cost,comments }).toString()}`
   );
 
 const apis = { getAllGuides, searchGuides };

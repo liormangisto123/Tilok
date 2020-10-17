@@ -3,6 +3,7 @@ import { searchGuides, getAllGuides } from "../api/index";
 import { AppContext } from "../context/appContext";
 import "../components/css/search-bar-row.css";
 import Selected from "./Select";
+import $ from "jquery";
 // import { ListItemAvatar } from '@material-ui/core';
 
 const Search = (props) => {
@@ -16,7 +17,11 @@ const Search = (props) => {
     searchResult: [],
   });
 
-  const changeHandler = (event) => {
+  const changeHandler = ({ name, value }) => {
+    console.log(name, value);
+    setState({ ...state, [name]: value });
+  };
+  const changeHandler1 = (event) => {
     // let name = event.target.name;
     // let value = event.target.value
     const { name, value } = event.target;
@@ -41,6 +46,7 @@ const Search = (props) => {
   const [countries, setCountries] = useState([]);
   const [cities, setCities] = useState([]);
   const [languages, setLanguages] = useState([]);
+
   useEffect(() => {
     async function loadArryas() {
       const response = await getAllGuides();
@@ -82,11 +88,16 @@ const Search = (props) => {
                 <div className="row search-row">
                   <div className=" col-md-3 p-0">
                     <Selected
+                      place="Country"
                       name="country"
                       onChange={changeHandler}
                       country="country"
                       list={countries.map((country) => {
-                        return { value: country, label: country };
+                        return {
+                          value: country,
+                          label: country,
+                          name: "country",
+                        };
                       })}
                     />
                     {/* <input
@@ -106,9 +117,12 @@ const Search = (props) => {
                       placeholder="City"
                     /> */}
                     <Selected
+                    onChange={changeHandler}
+                      name="city"
+                      place="City"
                       city="city"
                       list={cities.map((city) => {
-                        return { value: city, label: city };
+                        return { value: city, label: city, name: "city" };
                       })}
                     />
                   </div>
@@ -120,7 +134,7 @@ const Search = (props) => {
                       className="form-control search-slt"
                       placeholder="Cost"
                     /> */}
-                    <Selected language="language" />
+                    <Selected name="cost" place="Cost" />
                   </div>
                   <div className=" col-md-3 p-0">
                     {/* <select
@@ -136,8 +150,15 @@ const Search = (props) => {
                       <option>French</option>
                     </select> */}
                     <Selected
+                    onChange={changeHandler}
+                      name="language"
+                      place="Language"
                       list={languages.map((language) => {
-                        return { value: language, label: language };
+                        return {
+                          value: language,
+                          label: language,
+                          name: "language",
+                        };
                       })}
                     />
                   </div>
