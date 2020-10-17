@@ -21,6 +21,34 @@ button.btn.btn-danger.wrn-btn {
     background-color: #5F9EA0;
     border-color: #5F9EA0;
 }
-
-
+.btn-danger:hover {
+    color: #fff;
+    background-color: #2E8B57;
+    border-color: #2E8B57;
+}
+.btn-danger:not(:disabled):not(.disabled).active:focus, .btn-danger:not(:disabled):not(.disabled):active:focus, .show>.btn-danger.dropdown-toggle:focus {
+     box-shadow: none;
+}
+.btn-danger:not(:disabled):not(.disabled).active, .btn-danger:not(:disabled):not(.disabled):active, .show>.btn-danger.dropdown-toggle {
+    color: #fff;
+    background-color: #5F9EA0; 
+     border-color: #5F9EA0;
+}
+.btn-danger.focus, .btn-danger:focus {
+    color: #fff;
+    background-color:#5F9EA0; 
+     border-color:#5F9EA0; 
+    box-shadow: none; 
+}
+.css-1uccc91-singleValue {
+    height: 5vh;
+    width: 80%;
+   
+}
+.css-1pahdxg-control {
+    max-height: 38px;  
+     width: 95%;
+   padding-bottom: 5%;
+   margin-left: 4%;
+}
 

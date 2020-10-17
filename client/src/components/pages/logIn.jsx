@@ -12,12 +12,12 @@ export default class Login extends Component {
                 
 
                 <div className="form-group">
-                    <label>Email address</label>
+                    <label className="lable-name">Email address</label>
                     <input type="text" className="form-control" placeholder="Enter email" />
                 </div>
 
                 <div className="form-group">
-                    <label>Password</label>
+                    <label className="lable-name">Password</label>
                     <input type="text" className="form-control" placeholder="Enter password" />
                 </div>
 
