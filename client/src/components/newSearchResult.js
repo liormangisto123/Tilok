@@ -22,7 +22,7 @@ export default function SearchResults(props) {
               <a href="#" title="view profile" class="thumbnail">
                 <img
                   width="100%%"
-                  height="195vh"
+                  height="200vh"
                   src={props.pic}
                   alt="guide pic"
                 />
