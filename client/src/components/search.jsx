@@ -127,14 +127,14 @@ const Search = (props) => {
                     />
                   </div>
                   <div className=" col-md-2 p-0">
-                    {/* <input
+                    <input
                       type="text"
                       name="cost"
                       onChange={changeHandler}
                       className="form-control search-slt"
                       placeholder="Cost"
-                    /> */}
-                    <Selected name="cost" place="Cost" />
+                    />
+                    {/* <Selected name="cost" place="Cost" /> */}
                   </div>
                   <div className=" col-md-3 p-0">
                     {/* <select

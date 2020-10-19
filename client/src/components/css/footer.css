@@ -2,12 +2,20 @@ h3,p{
     /* color:white; */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
+    
 }
 .SocialMedia{
-  font-size:50px;
-  display: flex;
-  justify-content: space-around;
+  font-size: 1.5rem;
+  display: flex ;
+  position: relative;
+  justify-content:space-evenly;
+  margin-right: 3rem;
+  margin-bottom:3rem;
 
+}
+.social-Link{
+  margin-left: 10%;
+  color:white
 }
 
 .footer-container {
@@ -27,7 +35,7 @@ h3,p{
     text-align: center;
     margin-bottom: 10px;
     padding: 24px;
-    color: #fff;
+    color:white!important;
   }
   
   /* .footer-subscription > p {
@@ -38,12 +46,24 @@ h3,p{
   .footer-subscription-heading {
     margin-bottom: 20px;
     font-size: 24px;
+    color:white!important;
+
   }
   
   .footer-subscription-text {
     margin-bottom: 20px;
     font-size: 20px;
+    color:white!important;
   }
+  button.btnbtn--primary.btn--medium {
+    width: 35%;
+    margin: 0 6% 0 0;
+    border-radius: 3px;
+    font-family: "Fira Sans", sans-serif;
+    /* box-shadow: 0 8px 6px -6px black; */
+    background-color: white;
+    border: 2px solid gray;
+}
   
   .footer-input {
     padding: 8px 20px;

@@ -26,7 +26,7 @@ function Footer() {
                     <form>
                         <input type="email"
                             name="email"
-                            placeholder="your email"
+                            placeholder="Email"
                             className="footer-input" />
                         <Button buttonstyle='btn--outline'>subscribe</Button>
                     </form>
@@ -56,10 +56,10 @@ function Footer() {
                 <div>
                 <div className="SocialMedia">
                         {/* <h3>SocialMedia</h3> */}
-                        <Link to='#'><FiInstagram/></Link>
-                        <Link to='#'> <FaFacebook/></Link>
-                        <Link to='#'><FiYoutube/></Link>
-                        <Link to='#'><FiTwitter/></Link>
+                        <Link className="social-Link" to='#'><FiInstagram/></Link>
+                        <Link className="social-Link" to='#'> <FaFacebook/></Link>
+                        <Link className="social-Link" to='#'><FiYoutube/></Link>
+                        <Link className="social-Link" to='#'><FiTwitter/></Link>
                     </div>
                 </div>
             </div>

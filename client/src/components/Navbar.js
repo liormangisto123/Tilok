@@ -34,7 +34,7 @@ function Navbar() {
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
              {/* Tilok <FcGlobe/> */}
             {/* <i className='fab fa-typo3' />  */}
-            <img width="80px" height="70px" alt="Logo" src={logo} />
+            <img className="logo" width="80px" height="80px" alt="Logo" src={logo} />
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             {/* <i className={click ? "fas fa-times" : "fas fa-bars"} /> */}
