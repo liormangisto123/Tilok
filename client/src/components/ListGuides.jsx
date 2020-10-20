@@ -102,6 +102,9 @@ const ListGuides = () => {
                 }
                 return <span className="list-item">{t + " | "}</span>;
               })}
+              commentsText={item.comments.map((t) => {
+                return t.text;
+              })}
               trips={item.trips.map((trip) => {
                 return trip.name
               })}

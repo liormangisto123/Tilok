@@ -19,14 +19,38 @@ export default function SearchResults(props) {
         <div class="singleResult">
           <article class="search-result row">
             <div class="col-xs-12 col-sm-12 col-md-3">
-              <a href="#" title="view profile" class="thumbnail">
+              <Link
+                to={{
+                  pathname: `/guides/${props.id}`,
+                  state: {
+                    first_name: props.first_name,
+                    last_name: props.last_name,
+                    country: props.country,
+                    city: props.city,
+                    commentsText: props.commentsText,
+                    pic: props.pic,
+                    pics: props.picturs,
+                    cost: props.cost + "$",
+                    sum: props.summary,
+                    profile_sum: props.profile_summary,
+                    text: props.text,
+                    date: props.date,
+                    email: props.email,
+                    phone: props.phone,
+                    comments: props.comments,
+                    trips: props.trips,
+                    Language: props.Languages,
+                  },
+                }}
+              >
                 <img
                   width="100%%"
                   height="200vh"
                   src={props.pic}
                   alt="guide pic"
                 />
-              </a>
+              </Link>
+              {/* <a href="#" title="view profile" class="thumbnail"></a> */}
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-9 excerpet">
@@ -40,6 +64,7 @@ export default function SearchResults(props) {
                         last_name: props.last_name,
                         country: props.country,
                         city: props.city,
+                        commentsText: props.commentsText,
                         pic: props.pic,
                         pics: props.picturs,
                         cost: props.cost + "$",
@@ -50,8 +75,8 @@ export default function SearchResults(props) {
                         email: props.email,
                         phone: props.phone,
                         comments: props.comments,
-                        trips:props.trips,
-                        Language:props.Languages
+                        trips: props.trips,
+                        Language: props.Languages,
                       },
                     }}
                   >
@@ -81,17 +106,19 @@ export default function SearchResults(props) {
                   <div className="ex-la">
                     <ul>
                       <li>
-                        <AiFillDatabase />  Experience:
+                        <AiFillDatabase /> Experience:
                       </li>
 
-                      <li>{} {props.Experience}</li>
+                      <li>
+                        {} {props.Experience}
+                      </li>
                     </ul>
                   </div>
 
                   <div className="ex-la A">
                     <ul id="lang-list">
                       <li>
-                        <AiOutlineGlobal />  Language:
+                        <AiOutlineGlobal /> Language:
                       </li>
 
                       <li> {props.Language}</li>
@@ -100,11 +127,12 @@ export default function SearchResults(props) {
 
                   <div className="ex-la B">
                     <ul>
-                    <li>              
-                        <BiDollar />Cost:                      
+                      <li>
+                        <BiDollar />
+                        Cost:
                       </li>
                       <li>
-                         <span className="list-item"> {props.cost}$/day</span>
+                        <span className="list-item"> {props.cost}$/day</span>
                       </li>
                     </ul>
                   </div>

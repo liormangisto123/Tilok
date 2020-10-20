@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { Carousel } from "react-bootstrap";
 import { FaFacebook } from "react-icons/fa";
 import { FiYoutube, FiTwitter, FiInstagram } from "react-icons/fi";
+import { BsChatSquareDotsFill } from "react-icons/bs";
 import { $ } from "jquery";
 
 // class Myprofile extends React.Component {
@@ -26,6 +27,7 @@ const Myprofile = (props) => {
     email,
     phone,
     city,
+    commentsText,
     trips,
     Language,
     Languages,
@@ -43,6 +45,27 @@ const Myprofile = (props) => {
     ? ratingsArray.reduce((a, b) => a + b, 0) / ratingsArray.length
     : 0;
   const numOfReviews = comments.length;
+
+  const comme =  commentsText.map((t, i) => {
+    const rowLen =  commentsText.length;
+    if (rowLen === i + 1) {
+      return <div className=" commentsText">{t}</div>;
+    }
+    return <div className=" commentsText">{t} </div>;
+  });
+
+  // const dates = date.map((t, i) => {
+  //     const rowLen = date.length;
+  //     if (rowLen === i + 1) {
+  //         return <div>{t}</div>
+  //     }
+  //     return <div>{t}</div>
+  // })
+
+  // const comms = (c, d) => {
+
+  //     return <div> {c} {d} </div>
+  // }
 
   const [startDate, setstartDate] = useState({});
   const [endDate, setendDate] = useState({});
@@ -69,13 +92,11 @@ const Myprofile = (props) => {
   }
   function parseDate(str) {
     var mdy = str.split("-");
-    return new Date(mdy[2], mdy[0] - 1, mdy[1]);
+    return new Date(mdy[1], mdy[0] - 1, mdy[2]);
   }
-  //    datediff(state.endDate.task-state.startDate.task/(1000 * 60 * 60 * 24))
-  const Date =
-    (state.endDate.task - state.startDate.task) / (1000 * 60 * 60 * 24);
-  const totalPrice = Date;
-
+  const numOfDays = datediff(parseDate(state.startDate.task), parseDate(state.endDate.task))
+    const totalPrice = (parseInt(numOfDays) > 0) ? (parseInt(numOfDays) * parseInt(cost)) : ("0");
+  
   return (
     <>
       <div className="CityCounStar">
@@ -137,7 +158,7 @@ const Myprofile = (props) => {
               <div class="col-md-6 mb-3">
                 <label for="validationTooltip01">Start Date</label>
                 <input
-                  value={startDate.task}
+                  value={state.startDate.task}
                   onChange={startDatechangeHandler}
                   id="StartDate"
                   placeholder=""
@@ -149,7 +170,7 @@ const Myprofile = (props) => {
               <div className="col-md-6 mb-2">
                 <label for="validationTooltip02">End Date</label>
                 <input
-                  value={endDate.task}
+                  value={state.endDate.task}
                   onChange={endDatechangeHandler}
                   id="EndDate"
                   type="date"
@@ -195,7 +216,7 @@ const Myprofile = (props) => {
 
             <div className="cost">
               {/* <label for="validationTooltip02">Price per day :{cost}</label> */}
-              <label for="validationTooltip02">Total Price :{totalPrice}</label>
+              <label for="validationTooltip02">Total Price :{totalPrice}$</label>
             </div>
             <div>
               {/* {<form className="contact-form" onSubmit={this.sendEmail}>
@@ -217,20 +238,20 @@ const Myprofile = (props) => {
       <div className="items">
         <div className="Experience">
           <div>
-            <FaChevronCircleRight className="social-svg"/> {}
+            <FaChevronCircleRight className="icons-svg" /> {}
             Experience: {trips + ""}
           </div>
           <div className="details">
-            <FaChevronCircleRight className="social-svg"/> {}
+            <FaChevronCircleRight className="icons-svg" /> {}
             Languages: {Language + ""}
           </div>
           <div className="details">
-            <FaChevronCircleRight className="social-svg"/> {}
+            <FaChevronCircleRight className="icons-svg" /> {}
             Activity Time: 7:00AM- 18:00PM
           </div>
           <div className="details">
             <div className="details">
-              <FaChevronCircleRight className="social-svg"/> {}
+              <FaChevronCircleRight className="icons-svg" /> {}
               <Link to="/country">Cancellation Policy</Link>
             </div>
 
@@ -241,29 +262,41 @@ const Myprofile = (props) => {
         <div className="bar">{/* קן הפרדה */}</div>
         <div className="profile-Summary">{profile_sum}</div>
         <div className="bars">{/* קן הפרדה */}</div>
-        <div className="mDA">
-          <div className="contact">Contact me:</div>
-          <div className="Icon">
-            <Link to="#">
-              <FiInstagram className="social-svg"/>
-            </Link>
-          </div>
-          <div className="Icon">
-            <Link to="#">
-              {" "}
-              <FaFacebook className="social-svg"/>
-            </Link>
-          </div>
-          <div className="Icon">
-            <Link to="#">
-              <FiYoutube className="social-svg"/>
-            </Link>
-          </div>
-          <div className="Icon">
-            <Link to="#">
-              <FiTwitter className="social-svg"/>
-            </Link>
-          </div>
+
+        <div className="comm">
+          <BsChatSquareDotsFill /> Comments
+          <br></br>
+          {/* {ff} {dates} */}
+          <br></br>
+          {comme}
+          
+          {/* <CommentGroup></CommentGroup> <br></br> */}
+          {/* <div className="mDA">
+            <div className="Icon">
+              <Link to="#">
+                <FiInstagram className="social-svg" />
+              </Link>
+            </div>
+            <div className="Icon">
+              <Link to="#">
+                {" "}
+                <FaFacebook className="social-svg" />
+              </Link>
+            </div>
+            <div className="Icon">
+              <Link to="#">
+                <FiYoutube className="social-svg" />
+              </Link>
+            </div>
+            <div className="Icon">
+              <Link to="#">
+                <FiTwitter className="social-svg" />
+              </Link>
+            </div>
+          </div> */}
+          {/* 
+Comments: {text} <br/> */}
+          {/*  commentsText : {ff} */}
         </div>
         <div className="barss">{/* קן הפרדה */}</div>
       </div>

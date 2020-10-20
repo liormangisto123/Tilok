@@ -160,7 +160,12 @@ input[type="time"] {
   height: 55vh;
   border-radius: 9px;
 }
-
+.icons-svg {
+  color: #5f9ea0;
+  position: relative;
+  bottom: 2px;
+  font-size: 18px;
+}
 .c {
   border-width: 0px;
   /* position: absolute; */
@@ -392,7 +397,7 @@ input[type="text"],
 }
 .Icon{
     /* margin-right: 15%; */
-    margin-left: 10%;
+    margin-left: 5%;
     height: 50px;
 }
 
@@ -450,7 +455,7 @@ hero-section {
     /* margin-top: 27rem;
     margin-left: 1rem; */
     font-size: 1rem;
-    width: 30%;
+    width: 31%;
 
 }
 
@@ -459,3 +464,24 @@ hero-section {
 /* .hero-info ul li:last-child {
 	margin-bottom: 0;
 } */
+.comm{
+  margin-left: 3%;
+  margin-top: 0%;
+  width: 30%;
+}
+
+.commentsText {
+   background: #c9c9c9;
+ color: #000;
+   text-align: left;
+   font-size: 15px;
+ /* border-radius: 10px; */
+ /* border: #ffffff 2px inset; */
+ width: 75%;
+   height: auto;
+   border-radius:5px;
+ display: inline-block;
+ /* box-shadow: #a2a2a2 24px 0px 21px -3px; */
+   margin-bottom: 10px;
+   
+}

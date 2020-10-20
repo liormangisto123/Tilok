@@ -9,7 +9,7 @@ h3,p{
   display: flex ;
   position: relative;
   justify-content:space-evenly;
-  margin-right: 3rem;
+  margin-right: 4rem;
   margin-bottom:3rem;
 
 }
@@ -49,9 +49,12 @@ h3,p{
     color:white!important;
 
   }
-  
+  .footer-subscription-text.A{
+    margin-left: 3%;
+  }
   .footer-subscription-text {
     margin-bottom: 20px;
+    margin-right: 7%;
     font-size: 20px;
     color:white!important;
   }
