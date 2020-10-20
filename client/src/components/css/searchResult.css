@@ -162,13 +162,21 @@ hgroup h2.lead {
   margin-left: 20%;
 }
 .ex-la.B {
-  margin-left: 3%;
+  margin-left: 20%;
 }
-.ex-la.B li {
+.list-item{
+  margin-left: 2px;
+}
+.social-svg{
+ color: #5f9ea0;
+}
+/* .ex-la.B li {
+  font-weight: 500;
+    font-family: 'Fira Sans', sans-serif;
   font-weight: bold;
   font-size:large;
   color:black
-}
+} */
 .ex-la-minediv {
   
   width: 80%;

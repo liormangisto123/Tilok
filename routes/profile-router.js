@@ -1,5 +1,5 @@
 const express = require('express');
-const myProfileCtrl = require('../controllers/myProfile-ctrl');
+const myProfileCtrl = require('../controllers/myprofile-ctrl');
 const guiderCtrl = require('../controllers/guide-ctrl');
 
 const router = express.Router();

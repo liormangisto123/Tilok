@@ -13,7 +13,11 @@ import { AiOutlineGlobal, AiFillDatabase } from "react-icons/ai";
 
 =======
 import { BiDollar } from "react-icons/bi";
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
+>>>>>>> master
+=======
+import { Link } from "react-router-dom";
 >>>>>>> master
 export default function SearchResults(props) {
   // const classes = useStyles();
@@ -33,6 +37,7 @@ export default function SearchResults(props) {
           <article class="search-result row">
             <div class="col-xs-12 col-sm-12 col-md-3">
 <<<<<<< HEAD
+<<<<<<< HEAD
       
             <Modal text={props.first_name+' '+props.last_name} src={props.pic} country={props.country} cost={props.cost} com={props.com}
                             date={props.date} summary={props.summary} />
@@ -40,19 +45,51 @@ export default function SearchResults(props) {
               {/* </a> */}
 =======
               <a href="#" title="view profile" class="thumbnail">
+=======
+              <Link
+                to={{
+                  pathname: `/guides/${props.id}`,
+                  state: {
+                    first_name: props.first_name,
+                    last_name: props.last_name,
+                    country: props.country,
+                    city: props.city,
+                    commentsText: props.commentsText,
+                    pic: props.pic,
+                    pics: props.picturs,
+                    cost: props.cost + "$",
+                    sum: props.summary,
+                    profile_sum: props.profile_summary,
+                    text: props.text,
+                    date: props.date,
+                    email: props.email,
+                    phone: props.phone,
+                    comments: props.comments,
+                    trips: props.trips,
+                    Language: props.Languages,
+                  },
+                }}
+              >
+>>>>>>> master
                 <img
                   width="100%%"
-                  height="195vh"
+                  height="200vh"
                   src={props.pic}
                   alt="guide pic"
                 />
+<<<<<<< HEAD
               </a>
+>>>>>>> master
+=======
+              </Link>
+              {/* <a href="#" title="view profile" class="thumbnail"></a> */}
 >>>>>>> master
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-9 excerpet">
               <div className="info">
                 <h3>
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <a href="Modal" title="">
 =======
@@ -77,6 +114,33 @@ export default function SearchResults(props) {
                    
                   }}>
                     {props.first_name + " " + props.last_name} 
+=======
+                  <Link
+                    to={{
+                      pathname: `/guides/${props.id}`,
+                      state: {
+                        first_name: props.first_name,
+                        last_name: props.last_name,
+                        country: props.country,
+                        city: props.city,
+                        commentsText: props.commentsText,
+                        pic: props.pic,
+                        pics: props.picturs,
+                        cost: props.cost + "$",
+                        sum: props.summary,
+                        profile_sum: props.profile_summary,
+                        text: props.text,
+                        date: props.date,
+                        email: props.email,
+                        phone: props.phone,
+                        comments: props.comments,
+                        trips: props.trips,
+                        Language: props.Languages,
+                      },
+                    }}
+                  >
+                    {props.first_name + " " + props.last_name}
+>>>>>>> master
                   </Link>
                   {/* <a href="#" title="">
 >>>>>>> master
@@ -115,7 +179,9 @@ export default function SearchResults(props) {
                         <AiFillDatabase /> Experience:
                       </li>
 
-                      <li>{props.Experience}</li>
+                      <li>
+                        {} {props.Experience}
+                      </li>
                     </ul>
                   </div>
 
@@ -125,17 +191,21 @@ export default function SearchResults(props) {
                         <AiOutlineGlobal /> Language:
                       </li>
 
-                      <li>{props.Language}</li>
+                      <li> {props.Language}</li>
                     </ul>
                   </div>
-                </div>
-                <div className="ex-la B">
-                  <ul>
-                    <li>
-                      {props.cost}<BiDollar/>/day
-                      
-                    </li>
-                  </ul>
+
+                  <div className="ex-la B">
+                    <ul>
+                      <li>
+                        <BiDollar />
+                        Cost:
+                      </li>
+                      <li>
+                        <span className="list-item"> {props.cost}$/day</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>

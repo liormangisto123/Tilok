@@ -17,6 +17,9 @@
   align-items: center;
   width: 100%
 }
+.logo{
+  margin-bottom: 5%;
+}
 
 .navbar-logo {
   color: #fff;

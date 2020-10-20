@@ -132,11 +132,12 @@ export default ListGuides;
               profile_summary={item.profile_summary}
               id={item._id}
               pic={item.pic}
+              picturs={item.pics}
               first_name={item.first_name}
               last_name={item.last_name}
               country={item.country}
               city={item.city}
-              cost={item.cost}
+              cost={item.cost} 
               summary={item.summary}
               email={item.email}
               phone={item.phone}
@@ -147,25 +148,28 @@ export default ListGuides;
               date={item.comments.map((date) => (
                 date.date
               ))}
-              // Experience={item.trips.map((item) => {
-              //   return (<span>{item.name + " | "}</span>)
-              // })}
-              // Language={item.Language.map((item) => {
-              //   return (<span>{item + " | "}</span>)
-              // })}
               Experience={item.trips.map((t, i) => {
                 const rowLen = item.trips.length;
                 if (rowLen === i + 1) {
-                  return <span>{t.name}</span>;
+                  return <span className="list-item">{t.name}</span>;
                 }
-                return <span>{t.name + " | "}</span>;
+                return <span className="list-item">{t.name + " | "}</span>;
+              })}
+              Languages={item.Language.map((Language) => {
+                return Language;
               })}
               Language={item.Language.map((t, i) => {
                 const rowLen = item.Language.length;
                 if (rowLen === i + 1) {
-                  return <span>{t}</span>;
+                  return <span className="list-item">{t}</span>;
                 }
-                return <span>{t + " | "}</span>;
+                return <span className="list-item">{t + " | "}</span>;
+              })}
+              commentsText={item.comments.map((t) => {
+                return t.text;
+              })}
+              trips={item.trips.map((trip) => {
+                return trip.name
               })}
             />
           </div>

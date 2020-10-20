@@ -26,14 +26,14 @@ function Footer() {
                     <form>
                         <input type="email"
                             name="email"
-                            placeholder="your email"
+                            placeholder="Email"
                             className="footer-input" />
                         <Button buttonstyle='btn--outline'>subscribe</Button>
                     </form>
 
                 </div>
             </section>
-            <div className="footer-links">
+            {/* <div className="footer-links">
                 <div className="footer-link-wrapper">
                     <div className="footer-link-items">
                         <h3>AboutUs</h3>
@@ -52,16 +52,19 @@ function Footer() {
 
                     </div>
                  
-                </div>
-                <div>
+                </div> */}
+                {/* <div> */}
+                <p className="footer-subscription-text A">
+                Contact Us
+               </p>
                 <div className="SocialMedia">
-                        {/* <h3>SocialMedia</h3> */}
-                        <Link to='#'><FiInstagram/></Link>
-                        <Link to='#'> <FaFacebook/></Link>
-                        <Link to='#'><FiYoutube/></Link>
-                        <Link to='#'><FiTwitter/></Link>
+                        {/* <h3>Contact Us</h3> */}
+                        <Link className="social-Link" to='#'><FiInstagram/></Link>
+                        <Link className="social-Link" to='#'> <FaFacebook/></Link>
+                        <Link className="social-Link" to='#'><FiYoutube/></Link>
+                        <Link className="social-Link" to='#'><FiTwitter/></Link>
                     </div>
-                </div>
+                {/* </div> */}
             </div>
            
     

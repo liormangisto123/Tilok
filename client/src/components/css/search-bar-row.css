@@ -6,9 +6,7 @@
     padding-right: 2%;
 }
 
-input.form-control.search-slt {
-    border-radius: 5px;
-}
+
 select#exampleFormControlSelect1 {
     border-radius: 5px;
 }
@@ -51,4 +49,21 @@ button.btn.btn-danger.wrn-btn {
    padding-bottom: 5%;
    margin-left: 4%;
 }
+input.form-control.search-slt {
+    border-radius: 4px;
+    margin-right: 4%;
+    color: hsl(0,0%,50%);
+}
 
+input[type=text], [type=number], [type=date] {
+    width: 95% !important;
+    margin-left: 4% !important;
+}
+.css-b8ldur-Input {
+    margin: 2px;
+    padding-bottom: 4%;
+    padding-top: 0%;
+}
+.css-yk16xz-control {
+    height: 1vh;
+}
