@@ -107,7 +107,7 @@ export default ListGuides;
             ""
           )}
         {appContext.state.filterItems.length != 0 ? (
-          <div>
+          <div className="sort-Suction">
             <span>
               <button type="button" onClick={sortByCost} className="sortBtn-A">
                 Price lowest first

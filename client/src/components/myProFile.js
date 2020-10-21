@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { Carousel } from "react-bootstrap";
 import { FaFacebook } from "react-icons/fa";
 import { FiYoutube, FiTwitter, FiInstagram } from "react-icons/fi";
-import { BsChatSquareDotsFill } from "react-icons/bs";
+import { BsChatSquareDotsFill , BsFillPersonFill } from "react-icons/bs";
 import { $ } from "jquery";
 
 // class Myprofile extends React.Component {
@@ -37,6 +37,7 @@ const Myprofile = (props) => {
   const [state, setState] = useState({
     startDate: { task: "00-00-00" },
     endDate: { task: "00-00-00" },
+    numOfTour: 1,
   });
   const ratingsArray = (comments || [])
     .filter(({ rating }) => !!rating)
@@ -46,8 +47,8 @@ const Myprofile = (props) => {
     : 0;
   const numOfReviews = comments.length;
 
-  const comme =  commentsText.map((t, i) => {
-    const rowLen =  commentsText.length;
+  const comme = commentsText.map((t, i) => {
+    const rowLen = commentsText.length;
     if (rowLen === i + 1) {
       return <div className=" commentsText">{t}</div>;
     }
@@ -67,36 +68,48 @@ const Myprofile = (props) => {
   //     return <div> {c} {d} </div>
   // }
 
-  const [startDate, setstartDate] = useState({});
-  const [endDate, setendDate] = useState({});
-
   const startDatechangeHandler = (event) => {
     const value = { task: event.target.value };
-    // const { value } = event.target;
     setState({ ...state, startDate: value });
-    // setstartDate(value)
-    // console.log(startDate)
   };
   const endDatechangeHandler = (event) => {
     const value = { task: event.target.value };
-    // const { value } = event.target;
     setState({ ...state, endDate: value });
-    // setendDate(value)
-    // console.log(endDate)
   };
 
   function datediff(first, second) {
-    // Take the difference between the dates and divide by milliseconds per day.
-    // Round to nearest whole number to deal with DST.
     return Math.round((second - first) / (1000 * 60 * 60 * 24));
   }
   function parseDate(str) {
     var mdy = str.split("-");
     return new Date(mdy[1], mdy[0] - 1, mdy[2]);
   }
-  const numOfDays = datediff(parseDate(state.startDate.task), parseDate(state.endDate.task))
-    const totalPrice = (parseInt(numOfDays) > 0) ? (parseInt(numOfDays) * parseInt(cost)) : ("0");
-  
+  const numOfDays = datediff(
+    parseDate(state.startDate.task),
+    parseDate(state.endDate.task)
+  );
+  const number = state.numOfTour == 1 ? 1 : state.numOfTour * 0.5;
+  const totalPrice = Math.round(
+    numOfDays <= 0 ? 0 : numOfDays * parseInt(cost) * number
+  );
+
+  const datetext = comments.map((t, i) => {
+    const rowLen = comments.length;
+    if (rowLen === i + 1) {
+      return (
+        <div className="box-shadow">
+          <BsFillPersonFill /> {t.text} <br /> <br />{" "}
+          <div className="stroke">{t.date}</div>{" "}
+        </div>
+      );
+    }
+    return (
+      <div className="box-shadow">
+        <BsFillPersonFill /> {t.text} <br /> <br />{" "}
+        <div className="stroke"> {t.date}</div>{" "}
+      </div>
+    );
+  });
   return (
     <>
       <div className="CityCounStar">
@@ -183,20 +196,34 @@ const Myprofile = (props) => {
               <div class="col-md-6 mb-3">
                 <label for="validationTooltip03">Tourists</label>
                 {/* <input type="number" id="Tourists" class="form-control" required /> */}
-                <select name="Tourists" id="Tourists" placeholder="">
-                  <option type="number" value="one">
+                <select
+                  onChange={(event) => {
+                    setState({ ...state, numOfTour: event.target.value });
+                  }}
+                  name="Tourists"
+                  id="Tourists"
+                  placeholder=""
+                >
+                  {[1, 2, 3, 4, 5, 6, 7].map((i) => {
+                    return (
+                      <option key={i} type="number" value={i}>
+                        {i}
+                      </option>
+                    );
+                  })}
+                  {/* <option type="number" value="one">
                     1
                   </option>
-                  <option type="number" value="two">
+                  <option type="number" value={2}>
                     2
                   </option>
-                  <option type="number" value="tree">
+                  <option type="number" value={3}>
                     3
                   </option>
-                  <option type="number" value="four">
+                  <option type="number" value={4}>
                     4
                   </option>
-                  <option type="number" value="five">
+                  <option type="number" value={5}>
                     5
                   </option>
                   <option type="number" value="six">
@@ -204,7 +231,7 @@ const Myprofile = (props) => {
                   </option>
                   <option type="number" value="seven">
                     7+
-                  </option>
+                  </option> */}
                 </select>
 
                 {/* <div class="invalid-tooltip">
@@ -216,7 +243,9 @@ const Myprofile = (props) => {
 
             <div className="cost">
               {/* <label for="validationTooltip02">Price per day :{cost}</label> */}
-              <label for="validationTooltip02">Total Price :{totalPrice}$</label>
+              <label for="validationTooltip02">
+                Total Price :{totalPrice}$
+              </label>
             </div>
             <div>
               {/* {<form className="contact-form" onSubmit={this.sendEmail}>
@@ -268,8 +297,7 @@ const Myprofile = (props) => {
           <br></br>
           {/* {ff} {dates} */}
           <br></br>
-          {comme}
-          
+          {datetext}
           {/* <CommentGroup></CommentGroup> <br></br> */}
           {/* <div className="mDA">
             <div className="Icon">

@@ -1,8 +1,8 @@
 button.sortBtn-A:focus {
-    border:3.5px solid black;
+    border:2.5px solid #778899;
   }
   button.sortBtn-B:focus {
-    border: 3.5px solid black;
+    border: 2.5px solid #778899;
   }
   button.sortBtn-A {
     width: 20%;
@@ -11,7 +11,7 @@ button.sortBtn-A:focus {
     font-family: "Fira Sans", sans-serif;
     /* box-shadow: 0 8px 6px -6px black; */
     background-color: white;
-    border: 2px solid gray;
+    border: 2px solid rgb(238, 237, 237);
   }
   button.sortBtn-B {
     width: 20%;
@@ -20,5 +20,8 @@ button.sortBtn-A:focus {
     font-family: "Fira Sans", sans-serif;
     /* box-shadow: 0 8px 6px -6px black; */
     background-color: white;
-    border: 2px solid gray;
+    border: 2px solid rgb(238, 237, 237);
+  }
+  .sort-Suction{
+    
   }
