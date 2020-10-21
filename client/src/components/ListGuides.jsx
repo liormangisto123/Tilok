@@ -1,13 +1,7 @@
 import React, { useContext } from "react";
 import { AppContext } from "../context/appContext";
 import SearchResults from "./newSearchResult";
-<<<<<<< HEAD
-import ListDisplay from '../components/ListDisplay';
-import Modal from '../../src/components/pages/profile'
-
-=======
 import "../components/css/listGuides.css"
->>>>>>> master
 const ListGuides = () => {
   const appContext = useContext(AppContext);
 
@@ -44,63 +38,6 @@ const ListGuides = () => {
                 {appContext.state.filterItems.length}
               </strong>{" "}
               results were found{" "}
-<<<<<<< HEAD
-                        </h2>
-                    </hgroup>
-                ) : (
-                        ""
-                    )}
-                {appContext.state.filterItems.length != 0 ? (
-                    <div>
-                        <button type="button" onClick={sortByCost} className="sortBtn">
-                            Price lowest first
-            </button>
-                    </div>
-                ) : (
-                        ""
-                    )}
-            </div>
-
-            {
-                appContext.state.filterItems &&
-                appContext.state.filterItems.map((props, index) => (
-                    <div className="results" key={index}>                  
-
-                        <SearchResults
-                        
-                            pic={props.pic}
-                            first_name={props.first_name}
-                            last_name={props.last_name}
-                            country={props.country}
-                            cost={props.cost+'$'}
-                            summary={props.summary}
-                            com  = {props.comments.map((com)=>(
-                                com.text
-                            ))}
-                            date  = {props.comments.map((date)=>(
-                                date.date
-                            ))}
-                            Experience={props.trips.map((props) => {
-                                return (<span>{props.name + " | "}</span>)
-                            })}
-
-                            Language={props.Language.map((props) => {
-                                return (<span>{props + " | "}</span>)
-                            })}
-
-                        // to="/"
-
-                        />
-
-                    </div>
-                ))}
-        </>
-    )
-}
-
-
-export default ListGuides;
-=======
             </h2>
           </hgroup>
         ) : (
@@ -178,9 +115,4 @@ export default ListGuides;
   );
 };
 
-<<<<<<< HEAD
 export default ListGuides;
->>>>>>> master
-=======
-export default ListGuides;
->>>>>>> master

@@ -1,24 +1,8 @@
 import React from "react";
 import "../components/css/searchResult.css";
-<<<<<<< HEAD
-import { AiOutlineGlobal, AiFillDatabase } from 'react-icons/ai';
-import Modal from '../../src/components/pages/profile'
-
-
-
-=======
 import { AiOutlineGlobal, AiFillDatabase } from "react-icons/ai";
-<<<<<<< HEAD
->>>>>>> master
-
-=======
 import { BiDollar } from "react-icons/bi";
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
->>>>>>> master
-=======
 import { Link } from "react-router-dom";
->>>>>>> master
 export default function SearchResults(props) {
   // const classes = useStyles();
   const ratingsArray = (props.comments || [])
@@ -31,21 +15,10 @@ export default function SearchResults(props) {
 
   return (
     <div class="container">
-
       <section class="col-xs-12 col-sm-6 col-md-12">
         <div class="singleResult">
           <article class="search-result row">
             <div class="col-xs-12 col-sm-12 col-md-3">
-<<<<<<< HEAD
-<<<<<<< HEAD
-      
-            <Modal text={props.first_name+' '+props.last_name} src={props.pic} country={props.country} cost={props.cost} com={props.com}
-                            date={props.date} summary={props.summary} />
-                
-              {/* </a> */}
-=======
-              <a href="#" title="view profile" class="thumbnail">
-=======
               <Link
                 to={{
                   pathname: `/guides/${props.id}`,
@@ -70,51 +43,19 @@ export default function SearchResults(props) {
                   },
                 }}
               >
->>>>>>> master
                 <img
                   width="100%%"
                   height="200vh"
                   src={props.pic}
                   alt="guide pic"
                 />
-<<<<<<< HEAD
-              </a>
->>>>>>> master
-=======
               </Link>
               {/* <a href="#" title="view profile" class="thumbnail"></a> */}
->>>>>>> master
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-9 excerpet">
               <div className="info">
                 <h3>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <a href="Modal" title="">
-=======
-                <Link to={{
-                    pathname:`/guides/${props.id}`,
-                    state: {
-                      first_name:props.first_name,
-                      last_name:props.last_name,
-                      country: props.country,
-                      city:props.city,
-                      pic: props.pic,
-                      cost: props.cost+ '$',
-                      sum: props.summary,
-                      profile_sum:props.profile_summary,
-                      text:  props.text,
-                      date : props.date,
-                      email:props.email,
-                      phone:props.phone,
-                      comments:props.comments,
-                    }
-                    
-                   
-                  }}>
-                    {props.first_name + " " + props.last_name} 
-=======
                   <Link
                     to={{
                       pathname: `/guides/${props.id}`,
@@ -140,10 +81,8 @@ export default function SearchResults(props) {
                     }}
                   >
                     {props.first_name + " " + props.last_name}
->>>>>>> master
                   </Link>
                   {/* <a href="#" title="">
->>>>>>> master
                     {props.first_name + " " + props.last_name}
                   </a> */}
                 </h3>
@@ -160,17 +99,8 @@ export default function SearchResults(props) {
                     </li>
                   </ul>
                 </div>
-<<<<<<< HEAD
-                <span>
-
-                summary:
-
-              </span>
-                <div>{props.summary}</div>
-=======
                 <span>summary:</span>
                 <div className="summary">{props.summary}</div>
->>>>>>> master
 
                 <div className="ex-la-minediv">
                   <div className="ex-la">
@@ -211,7 +141,6 @@ export default function SearchResults(props) {
             </div>
 
             <span class="clearfix borda"></span>
-            
           </article>
         </div>
       </section>

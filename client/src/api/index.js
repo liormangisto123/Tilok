@@ -11,11 +11,7 @@ function generateFullUrl() {
 }
 
 const api = axios.create({
-<<<<<<< HEAD
-  baseURL: "http://localhost:3001/api"
-=======
   baseURL: generateFullUrl() + "/api",
->>>>>>> master
 });
 export const getAllGuides = () => api.get("/guides");
 export const searchGuideById = (id) => api.get(`guides/:${id}`);
