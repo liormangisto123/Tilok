@@ -485,3 +485,28 @@ hero-section {
    margin-bottom: 10px;
    
 }
+.box-shadow {
+  background: #F5F5F5;
+  font-size: 15px;
+  color: #000;
+  font-family: Courier Newpx;
+  text-align:left;
+  text-align: 10px;
+	border-radius: 14px;
+	width: 248px;
+  height: auto;
+  padding-left: 5px;
+  margin-bottom: 10px;
+	display: inline-block;
+	box-shadow: #A3A3A3 0px 0px 5px -1px;
+}
+.stroke {
+  font-size: 12px;
+  text-align: right;
+  margin-right: 10px;
+	font-family: Courier Newpx;
+	color: #591b1b;
+	font-weight: bold;
+	font-style: italic;
+	text-shadow: rgba(163, 163, 163, 0) 0px 0px 0px;
+}
