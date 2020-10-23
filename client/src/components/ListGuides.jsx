@@ -76,7 +76,7 @@ const ListGuides = () => {
               city={item.city}
               cost={item.cost} 
               summary={item.summary}
-              email={item.email}
+              Email={item.Email}
               phone={item.phone}
               comments={item.comments}
               text={item.comments.map((comment) => {

@@ -11,7 +11,9 @@ export default function SearchResults(props) {
   const arrAvg = ratingsArray.length
     ? ratingsArray.reduce((a, b) => a + b, 0) / ratingsArray.length
     : 0;
-  // props.array.map(obj=> ({ ...obj, ratingAvg: arrAvg }))
+    const isLoaded =()=> {
+      window.scroll(0, 0);
+    }
 
   return (
     <div class="container">
@@ -20,6 +22,7 @@ export default function SearchResults(props) {
           <article class="search-result row">
             <div class="col-xs-12 col-sm-12 col-md-3">
               <Link
+              onClick={isLoaded}
                 to={{
                   pathname: `/guides/${props.id}`,
                   state: {
@@ -35,7 +38,7 @@ export default function SearchResults(props) {
                     profile_sum: props.profile_summary,
                     text: props.text,
                     date: props.date,
-                    email: props.email,
+                    Email: props.Email,
                     phone: props.phone,
                     comments: props.comments,
                     trips: props.trips,
@@ -57,6 +60,7 @@ export default function SearchResults(props) {
               <div className="info">
                 <h3>
                   <Link
+                    onClick={isLoaded}
                     to={{
                       pathname: `/guides/${props.id}`,
                       state: {

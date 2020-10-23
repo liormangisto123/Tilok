@@ -7,8 +7,8 @@ const Guieds = () => {
 
     return (
         <>
-            <Search />
-            <ListGuides />
+            <Search/>
+            <ListGuides/>
         </>
     )
 }

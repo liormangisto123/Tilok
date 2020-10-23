@@ -489,7 +489,7 @@ hero-section {
   background: #F5F5F5;
   font-size: 15px;
   color: #000;
-  font-family: Courier Newpx;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   text-align:left;
   text-align: 10px;
 	border-radius: 14px;
@@ -500,12 +500,29 @@ hero-section {
 	display: inline-block;
 	box-shadow: #A3A3A3 0px 0px 5px -1px;
 }
+.message{
+  font-size: 32px;
+  font-size: 34px;
+  margin-top: 2rem;
+  font-size: xx-large;
+  font-weight: 400;
+  text-align: -webkit-center;
+  font-family: 'Fira Sans', sans-serif;
+}
+.close{
+  color: red;
+  position: absolute;
+  font-size: xx-large;
+}
+.stroke{
+
+}
 .stroke {
   font-size: 12px;
   text-align: right;
   margin-right: 10px;
-	font-family: Courier Newpx;
-	color: #591b1b;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	color:#5f9ea0;
 	font-weight: bold;
 	font-style: italic;
 	text-shadow: rgba(163, 163, 163, 0) 0px 0px 0px;

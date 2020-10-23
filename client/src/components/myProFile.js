@@ -1,7 +1,5 @@
-import React, { Component, useContext, useEffect, useState } from "react";
+import React, {useState } from "react";
 import "../components/css/profile.css";
-// import '../components/css/dataGuide.css'
-// import emailjs from 'emailjs-com';
 import { BiChevronRightCircle } from "react-icons/bi";
 import { FaChevronCircleRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -9,7 +7,8 @@ import { Carousel } from "react-bootstrap";
 import { FaFacebook } from "react-icons/fa";
 import { FiYoutube, FiTwitter, FiInstagram } from "react-icons/fi";
 import { BsChatSquareDotsFill , BsFillPersonFill } from "react-icons/bs";
-import { $ } from "jquery";
+import Modalmodal from './ClientMessage';
+import moment from 'moment';
 
 // class Myprofile extends React.Component {
 const Myprofile = (props) => {
@@ -24,7 +23,7 @@ const Myprofile = (props) => {
     sum,
     text,
     date,
-    email,
+    Email,
     phone,
     city,
     commentsText,
@@ -99,14 +98,14 @@ const Myprofile = (props) => {
       return (
         <div className="box-shadow">
           <BsFillPersonFill /> {t.text} <br /> <br />{" "}
-          <div className="stroke">{t.date}</div>{" "}
+          <div className="stroke">{moment(t.date).format('d / MMM / YYYY')}</div>{" "}
         </div>
       );
     }
     return (
       <div className="box-shadow">
         <BsFillPersonFill /> {t.text} <br /> <br />{" "}
-        <div className="stroke"> {t.date}</div>{" "}
+        <div className="stroke"> {moment(t.date).format('d / MMM / YYYY')}</div>{" "}
       </div>
     );
   });
@@ -211,27 +210,6 @@ const Myprofile = (props) => {
                       </option>
                     );
                   })}
-                  {/* <option type="number" value="one">
-                    1
-                  </option>
-                  <option type="number" value={2}>
-                    2
-                  </option>
-                  <option type="number" value={3}>
-                    3
-                  </option>
-                  <option type="number" value={4}>
-                    4
-                  </option>
-                  <option type="number" value={5}>
-                    5
-                  </option>
-                  <option type="number" value="six">
-                    6
-                  </option>
-                  <option type="number" value="seven">
-                    7+
-                  </option> */}
                 </select>
 
                 {/* <div class="invalid-tooltip">
@@ -256,9 +234,11 @@ const Myprofile = (props) => {
                                             <input type="hidden" name="phone" value={this.props.phone} />
                                             <input type="hidden" name="user_email" value={this.props.email} />
                                             <input type="hidden" name="message" value={this.props.summary} /> */}
-              <button type="submit" className="bookNow">
+              {totalPrice>0?<Modalmodal email={Email}/>:<button type="submit" className="bookNow">
                 Book Now
-              </button>
+              </button>}                              
+              
+              
               {/* </form>} */}
             </div>
           </form>

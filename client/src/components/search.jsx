@@ -4,6 +4,7 @@ import { AppContext } from "../context/appContext";
 import "../components/css/search-bar-row.css";
 import Selected from "./Select";
 import $ from "jquery";
+import { AccessAlarmOutlined } from "@material-ui/icons";
 // import { ListItemAvatar } from '@material-ui/core';
 
 const Search = (props) => {
@@ -17,13 +18,20 @@ const Search = (props) => {
     searchResult: [],
   });
 
+  const [countries, setCountries] = useState([]);
+  const [cities, setCities] = useState([]);
+  const [languages, setLanguages] = useState([]);
+  const [citiesMap, setCitiesMap] = useState([]);
+
   const changeHandler = ({ name, value }) => {
-    console.log(name, value);
     setState({ ...state, [name]: value });
   };
+  //{"israel": ['tel aviv', 'haifa'], 'usa'}
+  const onCountryChange = ({ name, value }) => {
+    setState({ ...state, [name]: value });
+    setCities(citiesMap[value]);
+  };
   const changeHandler1 = (event) => {
-    // let name = event.target.name;
-    // let value = event.target.value
     const { name, value } = event.target;
     setState({ ...state, [name]: value });
   };
@@ -40,26 +48,54 @@ const Search = (props) => {
 
     appContext.setState({ filterItems: guides });
     if (props.history) {
-      props.history.push("/guides/listGuides");
+      // props.history.push("/guides/listGuides");
+      props.history.push({
+        pathname: "/guides/listGuides",
+        search: `?${new URLSearchParams({
+          country,
+          language,
+          city,
+          cost,
+        }).toString()}`,
+        state: { ...state }
+      });
     }
   };
-  const [countries, setCountries] = useState([]);
-  const [cities, setCities] = useState([]);
-  const [languages, setLanguages] = useState([]);
+
+  // useEffect(() => {
+  //   const CitiesList = citiesMap.map((countryArray) => {
+  //     if (state.country == countryArray.key) {
+  //     //   return countryArray.value;
+  //     }
+  //   });
+  //   setCities(uniq(CitiesList));
+  // }, [state.country]);
 
   useEffect(() => {
     async function loadArryas() {
       const response = await getAllGuides();
       const array = response.data.data;
+
       const CountriesList = array.map((item) => {
         return item.country;
       });
       setCountries(uniq(CountriesList));
 
-      const CitiesList = array.map((item) => {
-        return item.city;
-      });
-      setCities(uniq(CitiesList));
+      // const CitiesList = array.map((item) => {
+      //   return item.city;
+      // });
+      // setCities(uniq(CitiesList));
+
+      const citiesMap = array.reduce((accumulatorMap, currentItem) => {
+        const { city, country } = currentItem;
+        if (!accumulatorMap[country]) {
+          accumulatorMap[country] = [];
+        }
+        accumulatorMap[country].push(city);
+        return accumulatorMap;
+      }, {});
+      setCitiesMap(citiesMap);
+      console.log(JSON.stringify(citiesMap));
 
       const LanguagesArraysList = array.map((item) => {
         return item.Language;
@@ -90,7 +126,7 @@ const Search = (props) => {
                     <Selected
                       place="Country"
                       name="country"
-                      onChange={changeHandler}
+                      onChange={onCountryChange}
                       country="country"
                       list={countries.map((country) => {
                         return {
@@ -117,7 +153,7 @@ const Search = (props) => {
                       placeholder="City"
                     /> */}
                     <Selected
-                    onChange={changeHandler}
+                      onChange={changeHandler}
                       name="city"
                       place="City"
                       city="city"
@@ -130,7 +166,7 @@ const Search = (props) => {
                     <input
                       type="text"
                       name="cost"
-                      onChange={changeHandler}
+                      onChange={changeHandler1}
                       className="form-control search-slt"
                       placeholder="Cost"
                     />
@@ -150,7 +186,7 @@ const Search = (props) => {
                       <option>French</option>
                     </select> */}
                     <Selected
-                    onChange={changeHandler}
+                      onChange={changeHandler}
                       name="language"
                       place="Language"
                       list={languages.map((language) => {
