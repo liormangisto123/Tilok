@@ -26,7 +26,7 @@ export const searchGuides = (country, lang, city, cost, comments) =>
     }).toString()}`
   );
 
-const apis = { getAllGuides, searchGuides };
+const apis = { getAllGuides, searchGuides,searchGuideById };
 
 export default apis;
 

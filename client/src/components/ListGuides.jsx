@@ -11,6 +11,9 @@ const ListGuides = () => {
     // appContext.state.filterItems.sort((a, b) => Number(a) < Number(b) ? -1 : Number(a) > Number(b) ? 1 : 0);
     appContext.setState({ filterItems: sortedlist });
   };
+  const setInput = (word) => {
+    return word[0] + word.substring(1).toLowerCase();
+  };
   //
   const sortByRating = () => {
     const newlist = [...appContext.state.filterItems];
@@ -93,14 +96,14 @@ const ListGuides = () => {
                 return <span className="list-item">{t.name + " | "}</span>;
               })}
               Languages={item.Language.map((Language) => {
-                return Language;
+                return setInput(Language);
               })}
               Language={item.Language.map((t, i) => {
                 const rowLen = item.Language.length;
                 if (rowLen === i + 1) {
-                  return <span className="list-item">{t}</span>;
+                  return <span className="list-item">{setInput(t)}</span>;
                 }
-                return <span className="list-item">{t + " | "}</span>;
+                return <span className="list-item">{setInput(t) + " | "}</span>;
               })}
               commentsText={item.comments.map((t) => {
                 return t.text;

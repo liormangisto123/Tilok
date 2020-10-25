@@ -3,6 +3,8 @@ import "../components/css/searchResult.css";
 import { AiOutlineGlobal, AiFillDatabase } from "react-icons/ai";
 import { BiDollar } from "react-icons/bi";
 import { Link } from "react-router-dom";
+
+
 export default function SearchResults(props) {
   // const classes = useStyles();
   const ratingsArray = (props.comments || [])
@@ -24,7 +26,7 @@ export default function SearchResults(props) {
               <Link
               onClick={isLoaded}
                 to={{
-                  pathname: `/guides/${props.id}`,
+                  pathname:`/guides/${props.id}`,
                   state: {
                     first_name: props.first_name,
                     last_name: props.last_name,

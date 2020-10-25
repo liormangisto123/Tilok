@@ -1,4 +1,4 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 import "../components/css/profile.css";
 import { BiChevronRightCircle } from "react-icons/bi";
 import { FaChevronCircleRight } from "react-icons/fa";
@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 import { Carousel } from "react-bootstrap";
 import { FaFacebook } from "react-icons/fa";
 import { FiYoutube, FiTwitter, FiInstagram } from "react-icons/fi";
-import { BsChatSquareDotsFill , BsFillPersonFill } from "react-icons/bs";
-import Modalmodal from './ClientMessage';
-import moment from 'moment';
+import { BsChatSquareDotsFill, BsFillPersonFill } from "react-icons/bs";
+import Modalmodal from "./ClientMessage";
+import moment from "moment";
 
 // class Myprofile extends React.Component {
 const Myprofile = (props) => {
@@ -66,7 +66,9 @@ const Myprofile = (props) => {
 
   //     return <div> {c} {d} </div>
   // }
-
+  const setInput = (word) => {
+    return word[0] + word.substring(1).toLowerCase();
+  };
   const startDatechangeHandler = (event) => {
     const value = { task: event.target.value };
     setState({ ...state, startDate: value });
@@ -98,14 +100,16 @@ const Myprofile = (props) => {
       return (
         <div className="box-shadow">
           <BsFillPersonFill /> {t.text} <br /> <br />{" "}
-          <div className="stroke">{moment(t.date).format('d / MMM / YYYY')}</div>{" "}
+          <div className="stroke">
+            {moment(t.date).format("d / MMM / YYYY")}
+          </div>{" "}
         </div>
       );
     }
     return (
       <div className="box-shadow">
         <BsFillPersonFill /> {t.text} <br /> <br />{" "}
-        <div className="stroke"> {moment(t.date).format('d / MMM / YYYY')}</div>{" "}
+        <div className="stroke"> {moment(t.date).format("d / MMM / YYYY")}</div>{" "}
       </div>
     );
   });
@@ -113,7 +117,7 @@ const Myprofile = (props) => {
     <>
       <div className="CityCounStar">
         <div className="name">{first_name + " " + last_name}</div>
-        <div className="cityCountry">{city + ", " + country}</div>
+        <div className="cityCountry">{setInput(city) + ", " + setInput(country)}</div>
         <div class="rating" id="n">
           {[0, 1, 2, 3, 4].map((i) => {
             return <span className={i < arrAvg ? "full" : ""}>☆</span>;
@@ -234,11 +238,14 @@ const Myprofile = (props) => {
                                             <input type="hidden" name="phone" value={this.props.phone} />
                                             <input type="hidden" name="user_email" value={this.props.email} />
                                             <input type="hidden" name="message" value={this.props.summary} /> */}
-              {totalPrice>0?<Modalmodal email={Email}/>:<button type="submit" className="bookNow">
-                Book Now
-              </button>}                              
-              
-              
+              {totalPrice > 0 ? (
+                <Modalmodal email={Email} />
+              ) : (
+                <button type="submit" className="bookNow">
+                  Book Now
+                </button>
+              )}
+
               {/* </form>} */}
             </div>
           </form>

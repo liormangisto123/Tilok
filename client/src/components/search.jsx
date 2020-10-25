@@ -35,7 +35,9 @@ const Search = (props) => {
     const { name, value } = event.target;
     setState({ ...state, [name]: value });
   };
-
+  const setInput = (word) => {
+    return word[0] + word.substring(1).toLowerCase();
+  };
   const getSearchResult = async () => {
     const { language, country, city, cost } = state;
     const response = await searchGuides(
@@ -48,7 +50,6 @@ const Search = (props) => {
 
     appContext.setState({ filterItems: guides });
     if (props.history) {
-      // props.history.push("/guides/listGuides");
       props.history.push({
         pathname: "/guides/listGuides",
         search: `?${new URLSearchParams({
@@ -57,19 +58,10 @@ const Search = (props) => {
           city,
           cost,
         }).toString()}`,
-        state: { ...state }
+        state: { ...state },
       });
     }
   };
-
-  // useEffect(() => {
-  //   const CitiesList = citiesMap.map((countryArray) => {
-  //     if (state.country == countryArray.key) {
-  //     //   return countryArray.value;
-  //     }
-  //   });
-  //   setCities(uniq(CitiesList));
-  // }, [state.country]);
 
   useEffect(() => {
     async function loadArryas() {
@@ -131,7 +123,7 @@ const Search = (props) => {
                       list={countries.map((country) => {
                         return {
                           value: country,
-                          label: country,
+                          label: setInput(country),
                           name: "country",
                         };
                       })}
@@ -158,7 +150,11 @@ const Search = (props) => {
                       place="City"
                       city="city"
                       list={cities.map((city) => {
-                        return { value: city, label: city, name: "city" };
+                        return {
+                          value: city,
+                          label: setInput(city),
+                          name: "city",
+                        };
                       })}
                     />
                   </div>
@@ -192,7 +188,7 @@ const Search = (props) => {
                       list={languages.map((language) => {
                         return {
                           value: language,
-                          label: language,
+                          label: setInput(language),
                           name: "language",
                         };
                       })}

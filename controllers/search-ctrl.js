@@ -15,22 +15,19 @@ const search = (req, res) => {
   if (req.query.cost) {
     query.cost = req.query.cost;
   }
-
-
+  // minNum: { $gte:req.query.priceMin, $lte: req.query.cost }
   // const { lang, country,city,cost } = req.params;
   // const q = { Language: lang, country,city,cost }
-debugger
+  // db.student.find({ u1 : { $gt :  30, $lt : 60}});
+  debugger;
   guide
     .find(query)
     .then((guides) => {
-
       if (!guides.length) {
-        return res
-          .status(404)
-          .json({
-            success: false,
-            error: "not found a single guide in the chosen country",
-          });
+        return res.status(404).json({
+          success: false,
+          error: "not found a single guide in the chosen country",
+        });
       }
       return res.status(200).json({ success: true, data: guides });
     })
