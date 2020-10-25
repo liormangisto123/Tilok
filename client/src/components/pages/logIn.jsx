@@ -1,39 +1,45 @@
 import React, { Component } from "react";
-import '../css/logIn.css'
-
+import { Form, Button } from "react-bootstrap";
+import "../css/logIn.css";
+import "../css/register.css";
 export default class Login extends Component {
-    render() {
-        return (
-            <div className="container">
-            <form className="Login">
-                <div className="title2">
-                <h1>Login</h1>
-                </div>
-                
+  render() {
+    return (
+      <div className="formstyle">
+        <br />
+        <br />
+        <br />
+        <br />
 
-                <div className="form-group">
-                    <label className="lable-name">Email address</label>
-                    <input type="text" className="form-control" placeholder="Enter email" />
-                </div>
+        <h1 className="title">Log In</h1>
+        <Form id="formLogin">
+          <Form.Group controlId="formGridAddress1">
+            <Form.Label>Email</Form.Label>
+            <Form.Control type="Email" placeholder="Enter E-mail..." />
+          </Form.Group>
 
-                <div className="form-group">
-                    <label className="lable-name">Password</label>
-                    <input type="text" className="form-control" placeholder="Enter password" />
-                </div>
+          <Form.Group controlId="formGridAddress2">
+            <Form.Label>Password</Form.Label>
+            <Form.Control type="password" placeholder="Enter password..." />
+          </Form.Group>
 
-                {/* <div className="form-group">
-                    <div className="custom-control custom-checkbox">
-                        <input type="checkbox" className="custom-control-input" id="customCheck1" />
-                        <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
-                    </div>
-                </div> */}
+          <Form.Group id="formGridCheckbox">
+            <Form.Check type="checkbox" label="Check me out" />
+          </Form.Group>
 
-                <button type="submit" className="btn-login" width="50">Login</button>
-                <p className="forgot-password">
-                     <a href="#">Forgot password ?</a>
-                </p>
-            </form>
-            </div>
-        );
-    }
+          <div className="Button">
+            <Button variant="primary" type="submit" onClick={this.Alertt}>
+              Sing up
+            </Button>
+
+            <Button as="input" type="reset" value="Reset"></Button>
+          </div>
+        </Form>
+
+        <Button href="/signUp" variant="link">
+          Dont have account Click here to <strong>Sing in</strong>
+        </Button>
+      </div>
+    );
+  }
 }

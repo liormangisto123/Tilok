@@ -1,0 +1,57 @@
+.checkboxstyle {
+  margin-top: 50px;
+  margin-left: 50%;
+  display: flex;
+  font-size: 30px;
+}
+/* .space{
+         margin-right: 20px;
+     } */
+/* .Ta{
+         width:85% ;
+     } */
+.formstyle {
+  width: 100%;
+  /* margin-left: 10%; */
+  margin-right: 10%;
+}
+.Register {
+  margin-right: 10%;
+}
+.title {
+  -webkit-box-reflect: below -20px -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(transparent),
+      color-stop(22%, transparent),
+      to(rgba(255, 255, 255, 0.26))
+    );
+
+  margin-bottom: 80px;
+  height: 0px;
+  width: 100%;
+  font-size: 40px;
+  color: #000000;
+  font-family: Arial Black, Gadget, sans-serif;
+  margin-top: 2%;
+}
+.form-row {
+  width: 101%;
+}
+
+.Button {
+  text-align: center;
+}
+Button {
+  margin-right: 40px;
+  width:80px;
+}
+#formRegisterGuide {
+  width: 40%;
+  margin-left: 33%;
+}
+#formTourist {
+  width: 40%;
+  margin-left: 30%;
+}
