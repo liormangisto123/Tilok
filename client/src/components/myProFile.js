@@ -93,24 +93,26 @@ const Myprofile = (props) => {
   const totalPrice = Math.round(
     numOfDays <= 0 ? 0 : numOfDays * parseInt(cost) * number
   );
-
+  const isLoaded = () => {
+    window.scroll(0, 0);
+  };
   const datetext = comments.map((t) => {
-      return (
-        <div className="box-shadow">
-          <BsFillPersonFill /> UserName
-          <br />
-          {t.text} <br /> {" "}
-          <div className="stroke">
-            {moment(t.date).format("d / MMM / YYYY")}
-          </div>{" "}
-        </div>
-      );
+    return (
+      <div className="box-shadow">
+        <BsFillPersonFill /> UserName
+        <br />
+        {t.text} <br />{" "}
+        <div className="stroke">{moment(t.date).format("d / MMM / YYYY")}</div>{" "}
+      </div>
+    );
   });
   return (
     <>
       <div className="CityCounStar">
         <div className="name">{first_name + " " + last_name}</div>
-        <div className="cityCountry">{setInput(city) + ", " + setInput(country)}</div>
+        <div className="cityCountry">
+          {setInput(city) + ", " + setInput(country)}
+        </div>
         <div class="rating" id="n">
           {[0, 1, 2, 3, 4].map((i) => {
             return <span className={i < arrAvg ? "full" : ""}>☆</span>;
@@ -261,7 +263,9 @@ const Myprofile = (props) => {
           <div className="details">
             <div className="details">
               <FaChevronCircleRight className="icons-svg" /> {}
-              <Link to="/country">Cancellation Policy</Link>
+              <Link onClick={isLoaded} to="/policy">
+                Cancellation Policy
+              </Link>
             </div>
 
             <br></br>

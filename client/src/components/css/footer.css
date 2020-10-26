@@ -1,125 +1,122 @@
-h3,p{
-    /* color:white; */
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
-    
+h3,
+p {
+  /* color:white; */
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
-.SocialMedia{
+.SocialMedia {
   font-size: 1.5rem;
-  display: flex ;
+  display: flex;
   position: relative;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   margin-right: 4rem;
-  margin-bottom:3rem;
-
+  margin-bottom: 3rem;
 }
-.social-Link{
+.social-Link {
   margin-left: 10%;
-  color:white
+  color: white;
 }
 
 .footer-container {
-    background-color: #242424;
-     /* padding: 3rem 0 1rem 0; */
-    display: flex;
-    flex-direction: column;
+  background-color: #242424;
+  /* padding: 3rem 0 1rem 0; */
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-    align-items: center; 
-  }
- 
+  align-items: center;
+}
+
 .footer-subscription {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 10px;
-    padding: 24px;
-    color:white!important;
-  }
-  
-  /* .footer-subscription > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 24px;
+  color: white !important;
+}
+
+/* .footer-subscription > p {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
       'Lucida Sans', Arial, sans-serif;
   } */
-  
-  .footer-subscription-heading {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color:white!important;
 
-  }
-  .footer-subscription-text.A{
-    margin-left: 3%;
-  }
-  .footer-subscription-text {
-    margin-bottom: 20px;
-    margin-right: 7%;
-    font-size: 20px;
-    color:white!important;
-  }
-  button.btnbtn--primary.btn--medium {
-    width: 35%;
-    margin: 0 6% 0 0;
-    border-radius: 3px;
-    font-family: "Fira Sans", sans-serif;
-    /* box-shadow: 0 8px 6px -6px black; */
-    background-color: white;
-    border: 2px solid gray;
+.footer-subscription-heading {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: white !important;
 }
-  
-  .footer-input {
-    padding: 8px 20px;
-    border-radius: 2px;
-    margin-right: 10px;
-    outline: none;
-    border: none;
-    font-size: 18px;
-    margin-bottom: 0px;
-    border: 1px solid #fff;
-  }
-  
-  .footer-links {
-    width: 100%; 
-     max-width: 1000px; 
-    display: flex;
-    justify-content: center;
-  }
-  
-  .footer-link-wrapper {
-    display: flex;
-  }
-  
-  .footer-link-items {
-     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 16px;
-    text-align: left;
-    width: 160px; 
-    /* box-sizing: border-box; */
-  }
-   
- .footer-link-items a {
-    color: #fff;
-    text-decoration: none;
-    margin-bottom: 0.5rem;
-  }
-  
-   .footer-link-items a:hover {
-     color:blue;
-    transition: 0.3s ease-out;
-  } 
-  
-  /* .footer-email-form h2 {
+.footer-subscription-text.A {
+  margin-left: 3%;
+}
+.footer-subscription-text {
+  margin-bottom: 20px;
+  margin-right: 7%;
+  font-size: 20px;
+  color: white !important;
+}
+button.btnbtn--primary.btn--medium {
+  width: 35%;
+  margin: 0 6% 0 0;
+  border-radius: 3px;
+  font-family: "Fira Sans", sans-serif;
+  /* box-shadow: 0 8px 6px -6px black; */
+  background-color: white;
+  border: 2px solid gray;
+}
+
+.footer-input {
+  padding: 8px 20px;
+  border-radius: 2px;
+  margin-right: 10px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  margin-bottom: 0px;
+  border: 1px solid #fff;
+}
+
+.footer-links {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-link-wrapper {
+  display: flex;
+}
+
+.footer-link-items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 16px;
+  text-align: left;
+  width: 160px;
+  /* box-sizing: border-box; */
+}
+
+.footer-link-items a {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.footer-link-items a:hover {
+  color: blue;
+  transition: 0.3s ease-out;
+}
+
+/* .footer-email-form h2 {
     margin-bottom: 5px;
   } 
    */
-   /* .footer-input::placeholder {
+/* .footer-input::placeholder {
     color: #b1b1b1;
   } 
    */
-  /* Social Icons
+/* Social Icons
   .social-icon-link {
     color: #fff;
     font-size: 24px;
@@ -187,3 +184,47 @@ h3,p{
   
   @media screen and (max-width: 768px) {
   } */
+.footerMg {
+  color: black;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 33px;
+  text-align: -webkit-match-parent;
+  margin-top: 14px;
+}
+.closeX {
+  color: black;
+  font-size: 27px;
+  margin-right: 332px;
+  font-weight: 600;
+}
+.closeX:hover {
+  color: red;
+}
+
+.u {
+  width: 35%;
+  margin: 0 6% 0 0;
+  border-radius: 3px;
+  font-family: "Fira Sans", sans-serif;
+  /* box-shadow: 0 8px 6px -6px black; */
+  background-color: white;
+  border: 0px solid #f8f9fa;
+  position: relative;
+  left: 71%;
+  bottom: 45px;
+  height: 45px;
+  background-color: #5f9ea0;
+  color: white;
+  cursor: pointer;
+}
+.u:hover {
+  background-color: #5f9ea0;
+}
+.formFooter {
+  width: 85%;
+  /* margin-left: -13%; */
+  /* margin-right: -5%; */
+  position: relative;
+  right: 17%;
+}
