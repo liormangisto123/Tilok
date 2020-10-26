@@ -13,7 +13,7 @@ const search = (req, res) => {
     query.city = req.query.city;
   }
   if (req.query.cost) {
-    query.cost = req.query.cost;
+    query.cost =req.query.cost;
   }
   // minNum: { $gte:req.query.priceMin, $lte: req.query.cost }
   // const { lang, country,city,cost } = req.params;

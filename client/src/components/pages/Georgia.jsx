@@ -21,7 +21,10 @@ function _onReady(event) {
 const Georgia = () => {
   return (
     <>
-      <Search />
+      {/* <Search /> */}
+      <div className="text">
+        <h1>Wellcome To Georgia</h1>
+      </div>
 
       <div className="nimrod">
         <YouTube videoId="KNUcUBdYT58" opts={opts} onReady={_onReady} />
@@ -46,7 +49,7 @@ const Georgia = () => {
           />
           <Figure.Caption>
             <div className="text">
-              <h1>WellCome To Georgia</h1>
+             
               Known today as the "Peach State," Georgia, founded in 1733, is one
               of the original 13 states. <br />
               It was named in honor of England's King George II. During the
