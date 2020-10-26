@@ -4,7 +4,6 @@ import { AiOutlineGlobal, AiFillDatabase } from "react-icons/ai";
 import { BiDollar } from "react-icons/bi";
 import { Link } from "react-router-dom";
 
-
 export default function SearchResults(props) {
   // const classes = useStyles();
   const ratingsArray = (props.comments || [])
@@ -13,9 +12,9 @@ export default function SearchResults(props) {
   const arrAvg = ratingsArray.length
     ? ratingsArray.reduce((a, b) => a + b, 0) / ratingsArray.length
     : 0;
-    const isLoaded =()=> {
-      window.scroll(0, 0);
-    }
+  const isLoaded = () => {
+    window.scroll(0, 0);
+  };
 
   return (
     <div class="container">
@@ -24,9 +23,9 @@ export default function SearchResults(props) {
           <article class="search-result row">
             <div class="col-xs-12 col-sm-12 col-md-3">
               <Link
-              onClick={isLoaded}
+                onClick={isLoaded}
                 to={{
-                  pathname:`/guides/${props.id}`,
+                  pathname: `/guides/${props.id}`,
                   state: {
                     first_name: props.first_name,
                     last_name: props.last_name,
@@ -50,7 +49,7 @@ export default function SearchResults(props) {
               >
                 <img
                   width="100%%"
-                  height="200vh"
+                  height="205vh"
                   src={props.pic}
                   alt="guide pic"
                 />
@@ -130,18 +129,17 @@ export default function SearchResults(props) {
                       <li> {props.Language}</li>
                     </ul>
                   </div>
-
-                  <div className="ex-la B">
-                    <ul>
-                      <li>
-                        <BiDollar />
-                        Cost:
-                      </li>
-                      <li>
-                        <span className="list-item"> {props.cost}$/day</span>
-                      </li>
-                    </ul>
-                  </div>
+                </div>
+                <div className="ex-la B">
+                  <ul>
+                    <li>
+                      <BiDollar />
+                      Cost:
+                    </li>
+                    <li>
+                      <span className="list-item"> {props.cost}$/day</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>

@@ -22,8 +22,7 @@
   color: white;
 }
 .container {
-  margin-top: 40px;
-
+  margin-top: 2vh;
   color: #8c8c8c;
 }
 .mb20 {
@@ -161,9 +160,9 @@ hgroup h2.lead {
 .ex-la.A {
   margin-left: 20%;
 }
-.ex-la.B {
+/* .ex-la.B {
   margin-left: 20%;
-}
+} */
 .list-item{
   margin-left: 2px;
 }

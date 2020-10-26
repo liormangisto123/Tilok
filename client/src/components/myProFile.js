@@ -94,24 +94,17 @@ const Myprofile = (props) => {
     numOfDays <= 0 ? 0 : numOfDays * parseInt(cost) * number
   );
 
-  const datetext = comments.map((t, i) => {
-    const rowLen = comments.length;
-    if (rowLen === i + 1) {
+  const datetext = comments.map((t) => {
       return (
         <div className="box-shadow">
-          <BsFillPersonFill /> {t.text} <br /> <br />{" "}
+          <BsFillPersonFill /> UserName
+          <br />
+          {t.text} <br /> {" "}
           <div className="stroke">
             {moment(t.date).format("d / MMM / YYYY")}
           </div>{" "}
         </div>
       );
-    }
-    return (
-      <div className="box-shadow">
-        <BsFillPersonFill /> {t.text} <br /> <br />{" "}
-        <div className="stroke"> {moment(t.date).format("d / MMM / YYYY")}</div>{" "}
-      </div>
-    );
   });
   return (
     <>
