@@ -14,7 +14,7 @@ function Footer() {
       <section className="footer-subscription">
         <p> BLACK LIVES MATTER</p>
         <p className="footer-subscription-heading">
-          Join the Adventure newsletter to receive our best places and the our
+          Join the Adventure newsletter to receive our best places and our
           guides{" "}
         </p>
         <p className="footer-subscription-text">

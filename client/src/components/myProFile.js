@@ -99,7 +99,7 @@ const Myprofile = (props) => {
   const datetext = comments.map((t) => {
     return (
       <div className="box-shadow">
-        <BsFillPersonFill /> UserName
+        <BsFillPersonFill /> {t.name}
         <br />
         {t.text} <br />{" "}
         <div className="stroke">{moment(t.date).format("d / MMM / YYYY")}</div>{" "}
@@ -134,21 +134,21 @@ const Myprofile = (props) => {
               </div>
             </Carousel.Item>
             <Carousel.Item>
-              <img src={pics[0]} alt="Third slide" className="PicImg" />
+              <img src={pics[3]} alt="Third slide" className="PicImg" />
               <div class="carousel-caption">
                 {/* <h3 >Slight mask</h3> */}
                 {/* <p>Third text</p> */}
               </div>
             </Carousel.Item>
             <Carousel.Item>
-              <img src={pics[1]} alt="Third slide" className="PicImg" />
+              <img src={pics[4]} alt="Third slide" className="PicImg" />
               <div class="carousel-caption">
                 {/* <h3 >Slight mask</h3> */}
                 {/* <p>Third text</p> */}
               </div>
             </Carousel.Item>
             <Carousel.Item>
-              <img src={pics[2]} className="PicImg" />
+              <img src={pics[5]} className="PicImg" />
               <div class="carousel-caption">
                 {/* <h3 >Slight mask</h3> */}
                 {/* <p>Third text</p> */}
@@ -192,7 +192,7 @@ const Myprofile = (props) => {
             </div>
             <div className="form-row">
               <div class="col-md-6 mb-3">
-                <label for="validationTooltip03">Tourists</label>
+                <label for="validationTooltip03">Number of participant</label>
                 {/* <input type="number" id="Tourists" class="form-control" required /> */}
                 <select
                   onChange={(event) => {
@@ -210,7 +210,17 @@ const Myprofile = (props) => {
                     );
                   })}
                 </select>
-
+                <div>
+                  <label for="email-input">Email</label>
+                  <input
+                  className="email-input"
+                    id="email-input"
+                    type="email"
+                    name="email-inputted"
+                    placeholder="Email"
+                    
+                  />
+                </div>
                 {/* <div class="invalid-tooltip">
                                     Please provide a valid Tourists.
                                           
@@ -221,7 +231,7 @@ const Myprofile = (props) => {
             <div className="cost">
               {/* <label for="validationTooltip02">Price per day :{cost}</label> */}
               <label for="validationTooltip02">
-                Total Price :{totalPrice}$
+                Total Price: {totalPrice}$
               </label>
             </div>
             <div>

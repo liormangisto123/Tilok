@@ -17,7 +17,7 @@ const guideSchema = new schema(
   {
     first_name: { type: String, required: true },
     last_name: { type: String, required: true },
-    cost: { type: String, required: true },
+    cost: { type: Number, required: true },
     city: { type: String, required: true },
     country: { type: String, required: true },
     phone: { type: Number, required: true },

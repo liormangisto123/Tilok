@@ -7,6 +7,8 @@ import Georgia from './Georgia'
 import Italy from './Italy'
 import Extreme from './Extreme'
 import Policy from './policy'
+import Wildlife from './Wildlife'
+import Camping from './Camping'
 
 export{
     Guides,
@@ -17,5 +19,7 @@ export{
     Georgia,
     Italy,
     Extreme,
-    Policy
+    Policy,
+    Camping,
+    Wildlife
 }

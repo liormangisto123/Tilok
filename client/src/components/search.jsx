@@ -27,7 +27,9 @@ const Search = (props) => {
     setState({ ...state, [name]: value });
   };
   //{"israel": ['tel aviv', 'haifa'], 'usa'}
+
   const onCountryChange = ({ name, value }) => {
+    // debugger;
     setState({ ...state, [name]: value });
     setCities(citiesMap[value]);
   };
@@ -62,8 +64,13 @@ const Search = (props) => {
       });
     }
   };
-
   useEffect(() => {
+    // debugger;
+    if (props.list) {
+      Object.keys(props.list).forEach((key) => {
+        setState({ ...state, [key]: props.list[key] });
+      });
+    }
     async function loadArryas() {
       const response = await getAllGuides();
       const array = response.data.data;
@@ -86,6 +93,9 @@ const Search = (props) => {
         accumulatorMap[country].push(city);
         return accumulatorMap;
       }, {});
+      Object.keys(citiesMap).forEach((country) => {
+        citiesMap[country] = uniq(citiesMap[country]);
+      });
       setCitiesMap(citiesMap);
       console.log(JSON.stringify(citiesMap));
 
@@ -116,6 +126,7 @@ const Search = (props) => {
                 <div className="row search-row">
                   <div className=" col-md-3 p-0">
                     <Selected
+                      value={props.list&&props.list.country}
                       place="Country"
                       name="country"
                       onChange={onCountryChange}
@@ -145,6 +156,7 @@ const Search = (props) => {
                       placeholder="City"
                     /> */}
                     <Selected
+                    value={props.list&&props.list.city}
                       onChange={changeHandler}
                       name="city"
                       place="City"
@@ -164,7 +176,7 @@ const Search = (props) => {
                       name="cost"
                       onChange={changeHandler1}
                       className="form-control search-slt"
-                      placeholder="Cost"
+                      placeholder="up to($)"
                     />
                     {/* <Selected name="cost" place="Cost" /> */}
                   </div>
@@ -182,6 +194,7 @@ const Search = (props) => {
                       <option>French</option>
                     </select> */}
                     <Selected
+                    value={props.list&&props.list.language}
                       onChange={changeHandler}
                       name="language"
                       place="Language"

@@ -10,7 +10,9 @@ import {
   Georgia,
   Italy,
   Extreme,
-  Policy
+  Policy,
+  Wildlife,
+  Camping
 } from "./components/pages";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -33,8 +35,10 @@ class App extends Component {
             <Route path="/guides/:id" exact component={Myprofile} />
             <Route path="/georgia" exact component={Georgia} />
             <Route path="/italy" exact component={Italy} />
-            <Route path="/Extreme" exact component={Extreme} />
+            <Route path="/extreme" exact component={Extreme} />
             <Route path='/policy' exact component={Policy}/>
+            <Route path="/wildlife" exact component={Wildlife} />
+            <Route path='/camping' exact component={Camping}/>
           </Switch>
         </Router>
       </>
