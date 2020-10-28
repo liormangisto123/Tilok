@@ -49,7 +49,7 @@ const Italy = () => {
               alt="Third slide"
             />
             <Carousel.Caption>
-              <h3>WellCome To Italy</h3>
+              <h3>Wellcome To Italy</h3>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -61,7 +61,7 @@ const Italy = () => {
               alt="Third slide"
             />
             <Carousel.Caption>
-              <h3>WellCome To Italy</h3>
+              <h3>Wellcome To Italy</h3>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -73,7 +73,7 @@ const Italy = () => {
               alt="Third slide"
             />
             <Carousel.Caption>
-              <h3>WellCome To Italy</h3>
+              <h3>Wellcome To Italy</h3>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -85,7 +85,7 @@ const Italy = () => {
               alt="Third slide"
             />
             <Carousel.Caption>
-              <h3>WellCome To Italy</h3>
+              <h3>Wellcome To Italy</h3>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>

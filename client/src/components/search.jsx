@@ -63,6 +63,7 @@ const Search = (props) => {
         state: { ...state },
       });
     }
+    isLoaded() 
   };
   useEffect(() => {
     // debugger;
@@ -79,11 +80,6 @@ const Search = (props) => {
         return item.country;
       });
       setCountries(uniq(CountriesList));
-
-      // const CitiesList = array.map((item) => {
-      //   return item.city;
-      // });
-      // setCities(uniq(CitiesList));
 
       const citiesMap = array.reduce((accumulatorMap, currentItem) => {
         const { city, country } = currentItem;
@@ -114,8 +110,10 @@ const Search = (props) => {
   function uniq(arr) {
     return arr.filter((v, i, a) => a.indexOf(v) === i);
   }
+  const isLoaded = () => {
+    window.scroll(0, 0);
+  };
   const x = "country";
-  const { filterItems } = state;
   return (
     <div className="searchContainer">
       <section className="search-sec">
