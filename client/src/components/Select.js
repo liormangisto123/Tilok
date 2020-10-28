@@ -22,6 +22,9 @@ export default function Selected(props) {
     setSelectedOption(selectedOption);
     props.onChange(selectedOption);
   };
+  const setInput = (word) => {
+    return word[0] + word.substring(1).toLowerCase();
+  };
   return (
     <div className="selected">
       <Select
