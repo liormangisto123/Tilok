@@ -39,15 +39,14 @@
 
 .nav-menu {
   display: flex;
-  /* grid-template-columns: repeat(5, auto); */
-  /* grid-gap: 10px; */
+
   list-style: none;
   text-align: center;
-  /* width: 60vw; */
+  
   justify-content: center;
   align-items: center;
   margin: 0;
-  /* margin-right: 2rem; */
+  
 }
 a:hover {
    text-decoration: none

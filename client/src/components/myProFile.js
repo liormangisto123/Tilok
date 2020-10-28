@@ -179,7 +179,9 @@ const Myprofile = (props) => {
                 />
               </div>
               <div className="col-md-6 mb-2">
-                <label for="validationTooltip02">End Date</label>
+                <label className="end-date" for="validationTooltip02">
+                  End Date
+                </label>
                 <input
                   value={state.endDate.task}
                   onChange={endDatechangeHandler}
@@ -211,25 +213,20 @@ const Myprofile = (props) => {
                   })}
                 </select>
                 <div>
-                  <label for="email-input">Email</label>
+                  <label className="email-input-lable" for="email-input">
+                    Email
+                  </label>
                   <input
-                  className="email-input"
-                    id="email-input"
+                    className="email-input"
                     type="email"
                     name="email-inputted"
                     placeholder="Email"
-                    
                   />
                 </div>
-                {/* <div class="invalid-tooltip">
-                                    Please provide a valid Tourists.
-                                          
-                                </div> */}
               </div>
             </div>
 
             <div className="cost">
-              {/* <label for="validationTooltip02">Price per day :{cost}</label> */}
               <label for="validationTooltip02">
                 Total Price: {totalPrice}$
               </label>

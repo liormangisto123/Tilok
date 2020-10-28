@@ -46,9 +46,6 @@ export default class Examples extends Component {
           </button>
         </form>
 
-        {/* <Button buttonstyle='btn--outline' id="send" type="button"  onClick={() => this.openModal()}>
-                        send
-                    </Button> */}
         <Modal
           visible={this.state.visible}
           width="400"

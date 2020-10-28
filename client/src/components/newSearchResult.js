@@ -54,7 +54,6 @@ export default function SearchResults(props) {
                   alt="guide pic"
                 />
               </Link>
-              {/* <a href="#" title="view profile" class="thumbnail"></a> */}
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-9 excerpet">
@@ -87,9 +86,6 @@ export default function SearchResults(props) {
                   >
                     {props.first_name + " " + props.last_name}
                   </Link>
-                  {/* <a href="#" title="">
-                    {props.first_name + " " + props.last_name}
-                  </a> */}
                 </h3>
                 <div>
                   <ul>

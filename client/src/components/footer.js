@@ -25,27 +25,7 @@ function Footer() {
           <FooterMessege />
         </div>
       </section>
-      {/* <div className="footer-links">
-                <div className="footer-link-wrapper">
-                    <div className="footer-link-items">
-                        <h3>AboutUs</h3>
-                            <Link to='/signUp'>How it Works</Link>
-                            <Link to='/'>Testimonials</Link>
-                            <Link to='/'>Guides</Link>
-                            <Link to='/'>Country</Link>
-                        </div>
-                    </div>
-                    <div className="footer-link-items">
-                        <h3>ContactUs</h3>
-                        <Link to='/signUp'>How it Works</Link>
-                        <Link to='/'>United States</Link>
-                        <Link to='/'>United Kingdom</Link>
-                        <Link to='/'>Israel</Link>
 
-                    </div>
-                 
-                </div> */}
-      {/* <div> */}
       <p className="footer-subscription-text A">Contact Us</p>
       <div className="SocialMedia">
         {/* <h3>Contact Us</h3> */}
@@ -63,7 +43,6 @@ function Footer() {
           <FiTwitter />
         </Link>
       </div>
-      {/* </div> */}
     </div>
   );
 }

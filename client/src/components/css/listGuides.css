@@ -1,9 +1,4 @@
-/* button.sortBtn-A:focus {
-    border:2.5px solid #778899;
-  }
-  button.sortBtn-B:focus {
-    border: 2.5px solid #778899;
-  } */
+
   button.sortBtn-A:hover {
     background-color: rgb(241, 241, 241);
   }

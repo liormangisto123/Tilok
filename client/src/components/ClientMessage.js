@@ -64,7 +64,6 @@ export default class Examples extends Component {
           >
             Book Now
           </button>
-          {/* <button className="button" type="submit" value="I Want Him">I Want Him</button> */}
         </form>
 
         <Modal
@@ -96,7 +95,7 @@ export default class Examples extends Component {
             <div className="message">
               Thank you for booking.
               <br />
-              Confirmation email will be sent to you in the next few minutes.
+              You will recive a confirmation email in the next few minutes.
             </div>
           </div>
         </Modal>
