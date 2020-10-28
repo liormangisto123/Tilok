@@ -37,9 +37,7 @@ const Search = (props) => {
     const { name, value } = event.target;
     setState({ ...state, [name]: value });
   };
-  const setInput = (word) => {
-    return word[0] + word.substring(1).toLowerCase();
-  };
+ 
   const getSearchResult = async () => {
     const { language, country, city, cost } = state;
     const response = await searchGuides(
@@ -106,7 +104,9 @@ const Search = (props) => {
 
     loadArryas();
   }, []);
-
+ const setInput = (word) => {
+    return word[0] + word.substring(1).toLowerCase();
+  };
   function uniq(arr) {
     return arr.filter((v, i, a) => a.indexOf(v) === i);
   }

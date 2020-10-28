@@ -37,7 +37,7 @@ const Italy = () => {
               alt="First slide"
             />
             <Carousel.Caption>
-              <h3>WellCome To Italy</h3>
+              <h3>Wellcome to Italy</h3>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item interval={500}>
@@ -49,7 +49,7 @@ const Italy = () => {
               alt="Third slide"
             />
             <Carousel.Caption>
-              <h3>Wellcome To Italy</h3>
+              <h3>Wellcome to Italy</h3>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -61,7 +61,7 @@ const Italy = () => {
               alt="Third slide"
             />
             <Carousel.Caption>
-              <h3>Wellcome To Italy</h3>
+              <h3>Wellcome to Italy</h3>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -73,7 +73,7 @@ const Italy = () => {
               alt="Third slide"
             />
             <Carousel.Caption>
-              <h3>Wellcome To Italy</h3>
+              <h3>Wellcome to Italy</h3>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -100,13 +100,13 @@ const Italy = () => {
           juts deep into the Mediterranean Sea. Italy comprises some of the most
           varied and scenic landscapes on Earth and is often described as a
           country shaped like a boot. At its broad top stand the Alps, which are
-          among the world’s most rugged mountains. <br />
+          among the world’s most rugged mountains. <br /><br />
           Italy’s highest points are along Monte Rosa, which peaks in
           Switzerland, and along Mont Blanc, which peaks in France. The western
           Alps overlook a landscape of Alpine lakes and glacier-carved valleys
           that stretch down to the Po River and the Piedmont. Tuscany, to the
           south of the cisalpine region, is perhaps the country’s best-known
-          region. From the central Alps, running down the length of the country,
+          region.<br /><br /> From the central Alps, running down the length of the country,
           radiates the tall Apennine Range, which widens near Rome to cover
           nearly the entire width of the Italian peninsula. South of Rome the
           Apennines narrow and are flanked by two wide coastal plains, one
